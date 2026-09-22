@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Convergence Table | Closed Policy Working Group</title>
+  <meta name="description" content="The Convergence Table is a closed-door working session for governance practitioners to bring real operational deadlocks and face rigorous peer critique.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <!-- Placeholder domain used below (hrishikeshwakhare.com) — update og:url and canonical once the real domain is purchased -->
+  <meta property="og:title" content="The Convergence Table | Closed Policy Working Group">
+  <meta property="og:description" content="The Convergence Table is a closed-door working session for governance practitioners to bring real operational deadlocks and face rigorous peer critique.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hrishikeshwakhare.com/convergence-table.html">
+  <meta property="og:image" content="https://hrishikeshwakhare.com/images/home-portrait.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Convergence Table | Closed Policy Working Group">
+  <meta name="twitter:description" content="The Convergence Table is a closed-door working session for governance practitioners to bring real operational deadlocks and face rigorous peer critique.">
+  <meta name="twitter:image" content="https://hrishikeshwakhare.com/images/home-portrait.jpg">
+  <link rel="canonical" href="https://hrishikeshwakhare.com/convergence-table.html">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+          },
+          colors: {
+            brand: {
+              50: '#eff6ff', 100: '#dbeafe', 500: '#1d4ed8', 600: '#1a56db', 700: '#0052cc', 800: '#1e40af', 900: '#0f172a'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background-color: #ffffff; color: #111827; font-family: 'Plus Jakarta Sans', system-ui, sans-serif; overflow-x: hidden; }
+    ::selection { background-color: #0052cc; color: #ffffff; }
+    #menu-overlay { transition: opacity 0.35s ease, visibility 0.35s ease; }
+    #menu-overlay.open { opacity: 1; visibility: visible; pointer-events: auto; }
+    #menu-overlay.closed { opacity: 0; visibility: hidden; pointer-events: none; }
+    .menu-link-item { position: relative; display: inline-block; transition: transform 0.25s ease, color 0.25s ease; }
+    .menu-link-item::after { content: ''; position: absolute; width: 0%; height: 2px; bottom: -6px; left: 50%; transform: translateX(-50%); background-color: #3b82f6; transition: width 0.3s ease; }
+    .menu-link-item:hover::after { width: 100%; }
+    .menu-link-item:hover { transform: translateY(-2px); }
+    .card-elevated { transition: all 0.25s ease; border: 1px solid #e5e7eb; }
+    .card-elevated:hover { transform: translateY(-4px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05); border-color: #cbd5e1; }
+    .placeholder-box { background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%); }
+    .filter-btn.active { background-color: #0052cc; color: #ffffff; border-color: #0052cc; }
+  </style>
+</head>
+<body class="antialiased flex flex-col min-h-screen">
+  <!-- Minimalist Fixed Header -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <a href="index.html" class="flex flex-col items-start focus:outline-none">
+        <span class="font-extrabold tracking-tight text-lg md:text-xl text-neutral-900 uppercase">
+          WAKHARE HRISHIKESH <span class="font-light text-neutral-500">CHANDRASHEKHAR</span>
+        </span>
+        <span class="text-[10px] md:text-[11px] tracking-widest text-neutral-500 uppercase font-semibold">
+          Governance Strategist &bull; Odisha CMSDF
+        </span>
+      </a>
+      <div class="flex items-center gap-6">
+        <nav class="hidden lg:flex items-center space-x-7 text-sm font-medium text-neutral-600">
+          <a href="about.html" class="hover:text-brand-700 transition">About</a>
+          <a href="role-initiatives.html" class="hover:text-brand-700 transition">Role & Initiatives</a>
+          <a href="convergence-table.html" class="hover:text-brand-700 transition text-brand-700 font-semibold">&bull; Convergence Table</a>
+          <a href="https://wa.me/917276452587" target="_blank" rel="noopener noreferrer" class="hover:text-brand-700 transition">Contact</a>
+        </nav>
+        <button onclick="toggleMenu(true)" class="flex items-center justify-center w-11 h-11 rounded-full bg-neutral-100 hover:bg-neutral-900 hover:text-white transition">
+          <svg class="w-6 h-6 stroke-[2]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"></path></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Fullscreen Jet Black Navigation Overlay -->
+  <div id="menu-overlay" class="closed fixed inset-0 z-50 bg-[#0d0f12] text-white flex flex-col justify-between p-6 sm:p-12 overflow-y-auto">
+    <div class="max-w-6xl w-full mx-auto flex items-center justify-between gap-4 pt-2">
+      <div class="text-sm font-bold tracking-widest text-neutral-400 uppercase">Navigation Directory</div>
+      <button onclick="toggleMenu(false)" class="flex items-center justify-center w-12 h-12 rounded-full border border-neutral-800 hover:bg-neutral-800 text-neutral-300 hover:text-white transition">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+      </button>
+    </div>
+    <div class="max-w-3xl w-full mx-auto my-auto py-12 text-center">
+      <nav class="space-y-6 md:space-y-7 flex flex-col items-center">
+        <div><a href="about.html" class="menu-link-item text-2xl sm:text-4xl md:text-5xl font-semibold tracking-tight uppercase hover:text-brand-500">About</a></div>
+        <div><a href="role-initiatives.html" class="menu-link-item text-2xl sm:text-4xl md:text-5xl font-semibold tracking-tight uppercase hover:text-brand-500">Current Role & Initiatives</a></div>
+        <div><a href="career.html" class="menu-link-item text-2xl sm:text-4xl md:text-5xl font-semibold tracking-tight uppercase hover:text-brand-500">Career</a></div>
+        <div><a href="writing.html" class="menu-link-item text-2xl sm:text-4xl md:text-5xl font-semibold tracking-tight uppercase hover:text-brand-500">Writing & Publications</a></div>
+        <div><a href="convergence-table.html" class="menu-link-item text-2xl sm:text-4xl md:text-5xl font-semibold tracking-tight uppercase text-blue-400 hover:text-white">The Convergence Table</a></div>
+        <div><a href="gallery.html" class="menu-link-item text-2xl sm:text-4xl md:text-5xl font-semibold tracking-tight uppercase hover:text-brand-500">Gallery</a></div>
+        <div><a href="https://wa.me/917276452587" target="_blank" rel="noopener noreferrer" class="menu-link-item text-2xl sm:text-4xl md:text-5xl font-semibold tracking-tight uppercase hover:text-brand-500">Contact</a></div>
+      </nav>
+    </div>
+    <div class="max-w-6xl w-full mx-auto border-t border-neutral-800 pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-neutral-400 gap-4">
+      <div>Governance Strategist &bull; District-level architect of India's Governance stack</div>
+      <div class="flex gap-6"><a href="https://www.linkedin.com/in/hrishikeshwakhare/" target="_blank" class="hover:text-blue-400">LinkedIn (18.7k+)</a><a href="index.html" class="hover:text-white">Home Cover</a></div>
+    </div>
+  </div>
+
+  <!-- Page Content Viewport -->
+  <main class="flex-1 w-full bg-white">
+    
+        <div class="py-16 sm:py-24 bg-white">
+          <div class="max-w-5xl mx-auto px-6 space-y-16">
+
+            <!-- Standalone Full-Page Feature Header -->
+            <div class="bg-neutral-950 text-white rounded-3xl p-8 sm:p-14 shadow-2xl relative overflow-hidden">
+              <div class="absolute -right-16 -top-16 w-96 h-96 bg-brand-700/30 rounded-full blur-3xl pointer-events-none"></div>
+
+              <div class="max-w-3xl space-y-6 relative z-10">
+                <div class="inline-flex items-center gap-2 px-3 py-1 bg-brand-700 text-white rounded-full text-xs font-bold uppercase tracking-wider">
+                  Closed Working Group
+                </div>
+                <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight">
+                  The Convergence Table
+                </h1>
+                <p class="text-xl text-neutral-300 font-light leading-relaxed">
+                  A high-velocity, worldwide working table for policy and governance practitioners. Bring a real structural problem, argue it without bureaucratic posture, and leave with something immediately usable.
+                </p>
+                <div class="flex items-center gap-4 text-xs font-mono text-neutral-400 pt-2">
+                  <span>&bull; Not a webinar</span>
+                  <span>&bull; Not a panel talk</span>
+                  <span>&bull; Not a dying group chat</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- The Manifesto & Working Table Rules -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+              <div class="space-y-4">
+                <span class="text-xs font-bold uppercase tracking-widest text-brand-700">The Problem with Policy Forums</span>
+                <h2 class="text-2xl font-bold text-gray-900">Why Most Think-Tanks and Panels Fail Practitioners</h2>
+                <p class="text-sm text-gray-600 leading-relaxed">
+                  Most governance conferences consist of prepared slide-decks and ceremonial pleasantries. By the time a session ends, no one has challenged an assumption, and no operating protocol has been altered.
+                </p>
+                <p class="text-sm text-gray-600 leading-relaxed">
+                  The Convergence Table was created to reverse this. It is a working session where participants present an unresolved operational deadlock—whether it’s district inter-departmental conflict, data leakage across implementing agencies, or narrative dissonance in public diplomacy—and subject it to peer critique.
+                </p>
+              </div>
+
+              <div class="space-y-4">
+                <span class="text-xs font-bold uppercase tracking-widest text-brand-700">The Ground Rules</span>
+                <h2 class="text-2xl font-bold text-gray-900">Three Inviolable Precepts</h2>
+                
+                <div class="space-y-3">
+                  <div class="p-4 rounded-xl bg-gray-50 border border-gray-200">
+                    <h4 class="text-sm font-bold text-gray-900">1. Substance Over Seniority</h4>
+                    <p class="text-xs text-gray-600 mt-1">Hierarchy is checked at the door. An IAS officer, a grassroots fellow, and an international researcher speak with identical standing.</p>
+                  </div>
+                  <div class="p-4 rounded-xl bg-gray-50 border border-gray-200">
+                    <h4 class="text-sm font-bold text-gray-900">2. Bring a Friction, Not a Trophy</h4>
+                    <p class="text-xs text-gray-600 mt-1">Do not present sanitized case studies. Bring the specific mechanism that broke and the operational trade-offs you are wrestling with.</p>
+                  </div>
+                  <div class="p-4 rounded-xl bg-gray-50 border border-gray-200">
+                    <h4 class="text-sm font-bold text-gray-900">3. Usable Artifacts Only</h4>
+                    <p class="text-xs text-gray-600 mt-1">Every session concludes with a single-page blueprint, an automated sheet template, or a refined clause ready for ground testing.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Audience Profile Matrix -->
+            <div class="border-t border-gray-100 pt-16">
+              <div class="mb-10 text-center max-w-2xl mx-auto">
+                <span class="text-xs font-bold uppercase tracking-widest text-brand-700">Participation Cohorts</span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900 mt-1">Who Sits at the Table?</h2>
+                <p class="text-xs text-gray-500 mt-2">Open to global practitioners from across the public policy and state execution spectrum.</p>
+              </div>
+
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                <div class="p-5 rounded-xl border border-gray-200 text-center bg-white hover:border-brand-700 transition">
+                  <div class="w-10 h-10 rounded-full bg-blue-50 text-brand-700 mx-auto mb-3 flex items-center justify-center font-bold text-sm">DP</div>
+                  <h4 class="text-xs font-bold text-gray-900">District Administration</h4>
+                  <p class="text-[11px] text-gray-500 mt-1">District collectors, line department heads, field officers</p>
+                </div>
+
+                <div class="p-5 rounded-xl border border-gray-200 text-center bg-white hover:border-brand-700 transition">
+                  <div class="w-10 h-10 rounded-full bg-blue-50 text-brand-700 mx-auto mb-3 flex items-center justify-center font-bold text-sm">TT</div>
+                  <h4 class="text-xs font-bold text-gray-900">Think-Tanks &amp; Academia</h4>
+                  <p class="text-[11px] text-gray-500 mt-1">Policy analysts, university faculty, economists</p>
+                </div>
+
+                <div class="p-5 rounded-xl border border-gray-200 text-center bg-white hover:border-brand-700 transition">
+                  <div class="w-10 h-10 rounded-full bg-blue-50 text-brand-700 mx-auto mb-3 flex items-center justify-center font-bold text-sm">IR</div>
+                  <h4 class="text-xs font-bold text-gray-900">International Relations</h4>
+                  <p class="text-[11px] text-gray-500 mt-1">Diplomats, multilateral leads, foreign policy researchers</p>
+                </div>
+
+                <div class="p-5 rounded-xl border border-gray-200 text-center bg-white hover:border-brand-700 transition">
+                  <div class="w-10 h-10 rounded-full bg-blue-50 text-brand-700 mx-auto mb-3 flex items-center justify-center font-bold text-sm">FL</div>
+                  <h4 class="text-xs font-bold text-gray-900">Fellows &amp; Operators</h4>
+                  <p class="text-[11px] text-gray-500 mt-1">CMSDF, Gandhi, CPL, PMRDF and Young India fellows</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Application Form / DM to Apply Callout -->
+            <div class="bg-gray-50 border border-gray-200 rounded-3xl p-8 sm:p-12 text-center max-w-3xl mx-auto space-y-6">
+              <span class="text-xs font-bold uppercase tracking-widest text-brand-700">Admissions Protocol</span>
+              <h3 class="text-2xl sm:text-3xl font-extrabold text-gray-900">
+                Apply for an Upcoming Seat
+              </h3>
+              <p class="text-sm text-gray-600 max-w-xl mx-auto leading-relaxed">
+                Entry is selective and curated based purely on the substance of the problem you bring. Direct message Hrishikesh on LinkedIn or submit your operational challenge below.
+              </p>
+              
+              <div class="pt-2 flex flex-col sm:flex-row justify-center gap-4">
+                <a href="https://www.linkedin.com/in/hrishikeshwakhare/" target="_blank" rel="noopener noreferrer" class="px-8 py-3.5 bg-brand-700 hover:bg-brand-600 text-white font-bold text-sm rounded-lg shadow-lg hover:shadow-blue-900/20 transition flex items-center justify-center gap-2">
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                  <span>DM to Apply on LinkedIn</span>
+                </a>
+                <button onclick="navigateTo('contact.html')" class="px-8 py-3.5 bg-white hover:bg-gray-100 text-gray-800 border border-gray-300 font-semibold text-sm rounded-lg transition">
+                  Submit Problem Brief &rarr;
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      
+  </main>
+
+  <!-- Shared Universal Footer -->
+  <footer class="bg-neutral-950 text-white border-t border-neutral-900 mt-20">
+    <div class="max-w-7xl mx-auto px-6 py-16">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 pb-16 border-b border-neutral-800 items-center">
+        <div class="lg:col-span-7 space-y-3">
+          <span class="text-xs uppercase tracking-widest text-brand-500 font-bold">Execution Philosophy</span>
+          <blockquote class="font-serif italic text-2xl sm:text-3xl text-neutral-100">&ldquo;Policy is only as good as its execution.&rdquo;</blockquote>
+          <p class="text-xs text-neutral-400 font-sans">Wakhare Hrishikesh Chandrashekhar &bull; CMSDF, Govt. of Odisha &bull; CPL & IMPRI Fellow</p>
+        </div>
+        <div class="lg:col-span-5 bg-neutral-900 border border-neutral-800 p-6 rounded-2xl">
+          <h4 class="text-sm font-semibold text-white mb-1">Strategic Briefings & Updates</h4>
+          <p class="text-xs text-neutral-400 mb-4">Quarterly dispatches on district convergence and governance stacks.</p>
+          <form onsubmit="event.preventDefault();" class="flex gap-2">
+            <input type="email" placeholder="Enter your official email" class="flex-1 bg-neutral-950 border border-neutral-700 text-xs px-3.5 py-2.5 rounded-lg text-white outline-none">
+            <button class="bg-brand-700 hover:bg-brand-600 text-white text-xs font-semibold px-4 py-2.5 rounded-lg">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-500">
+        <a href="https://www.linkedin.com/in/hrishikeshwakhare/" target="_blank" class="text-blue-400 hover:underline">LinkedIn Profile (18,707+ Follower Base)</a>
+        <p>&copy; 2026 Wakhare Hrishikesh Chandrashekhar. All rights reserved. &bull; Pune / Dhenkanal</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu(isOpen) {
+      const overlay = document.getElementById('menu-overlay');
+      if (isOpen) {
+        overlay.classList.remove('closed'); overlay.classList.add('open'); document.body.style.overflow = 'hidden';
+      } else {
+        overlay.classList.remove('open'); overlay.classList.add('closed'); document.body.style.overflow = '';
+      }
+    }
+
+    function navigateTo(page) {
+      window.location.href = page;
+    }
+  </script>
+</body>
+</html>
