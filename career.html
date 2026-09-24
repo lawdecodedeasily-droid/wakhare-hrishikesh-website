@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Career & Journey | Wakhare Hrishikesh Chandrashekhar</title>
-  <meta name="description" content="Career trajectory of Wakhare Hrishikesh Chandrashekhar, from Gandhi Fellowship work in Rajasthan to civic campaigns in Bihar and district governance in Odisha.">
+  <title>Career & Journey | Hrishikesh A.C Wakhare</title>
+  <meta name="description" content="Career trajectory of Hrishikesh A.C Wakhare, from Gandhi Fellowship work in Rajasthan to civic campaigns in Bihar and district governance in Odisha.">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <!-- Placeholder domain used below (hrishikeshwakhare.com) — update og:url and canonical once the real domain is purchased -->
-  <meta property="og:title" content="Career & Journey | Wakhare Hrishikesh Chandrashekhar">
-  <meta property="og:description" content="Career trajectory of Wakhare Hrishikesh Chandrashekhar, from Gandhi Fellowship work in Rajasthan to civic campaigns in Bihar and district governance in Odisha.">
+  <meta property="og:title" content="Career & Journey | Hrishikesh A.C Wakhare">
+  <meta property="og:description" content="Career trajectory of Hrishikesh A.C Wakhare, from Gandhi Fellowship work in Rajasthan to civic campaigns in Bihar and district governance in Odisha.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://hrishikeshwakhare.com/career.html">
   <meta property="og:image" content="https://hrishikeshwakhare.com/images/home-portrait.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Career & Journey | Wakhare Hrishikesh Chandrashekhar">
-  <meta name="twitter:description" content="Career trajectory of Wakhare Hrishikesh Chandrashekhar, from Gandhi Fellowship work in Rajasthan to civic campaigns in Bihar and district governance in Odisha.">
+  <meta name="twitter:title" content="Career & Journey | Hrishikesh A.C Wakhare">
+  <meta name="twitter:description" content="Career trajectory of Hrishikesh A.C Wakhare, from Gandhi Fellowship work in Rajasthan to civic campaigns in Bihar and district governance in Odisha.">
   <meta name="twitter:image" content="https://hrishikeshwakhare.com/images/home-portrait.jpg">
   <link rel="canonical" href="https://hrishikeshwakhare.com/career.html">
   <script src="https://cdn.tailwindcss.com"></script>
@@ -52,6 +52,19 @@
     .card-elevated:hover { transform: translateY(-4px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05); border-color: #cbd5e1; }
     .placeholder-box { background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%); position: relative; overflow: hidden; }
     .filter-btn.active { background-color: #0052cc; color: #ffffff; border-color: #0052cc; }
+    .logo-marquee-wrap { overflow: hidden; -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent); mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent); }
+    .logo-marquee-track { display: flex; align-items: center; gap: 3.5rem; width: max-content; animation: logo-marquee 42s linear infinite; }
+    .logo-marquee-wrap:hover .logo-marquee-track { animation-play-state: paused; }
+    .logo-marquee-set { display: flex; align-items: center; gap: 3.5rem; }
+    .logo-marquee-item { flex-shrink: 0; height: 56px; display: flex; align-items: center; }
+    .logo-marquee-item img { height: 100%; width: auto; max-width: 160px; object-fit: contain; filter: grayscale(100%); opacity: 0.55; transition: filter 0.3s ease, opacity 0.3s ease; }
+    .logo-marquee-item img:hover { filter: grayscale(0%); opacity: 1; }
+    @keyframes logo-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    @media (prefers-reduced-motion: reduce) {
+      .logo-marquee-track { animation: none; }
+      .logo-marquee-wrap { overflow-x: auto; -webkit-mask-image: none; mask-image: none; }
+      .logo-marquee-duplicate { display: none; }
+    }
   </style>
 </head>
 <body class="antialiased flex flex-col min-h-screen">
@@ -60,7 +73,7 @@
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
       <a href="index.html" class="flex flex-col items-start focus:outline-none">
         <span class="font-extrabold tracking-tight text-lg md:text-xl text-neutral-900 uppercase">
-          WAKHARE HRISHIKESH <span class="font-light text-neutral-500">CHANDRASHEKHAR</span>
+          HRISHIKESH A.C <span class="font-light text-neutral-500">WAKHARE</span>
         </span>
         <span class="text-[10px] md:text-[11px] tracking-widest text-neutral-500 uppercase font-semibold">
           Governance Strategist
@@ -71,6 +84,7 @@
           <a href="about.html" class="hover:text-brand-700 transition">About</a>
           <a href="role-initiatives.html" class="hover:text-brand-700 transition">Role & Initiatives</a>
           <a href="convergence-table.html" class="hover:text-brand-700 transition text-brand-700 font-semibold">&bull; Convergence Table</a>
+          <a href="endorsements.html" class="hover:text-brand-700 transition">Endorsements</a>
           <a href="contact.html" class="hover:text-brand-700 transition">Contact</a>
         </nav>
         <button onclick="toggleMenu(true)" class="flex items-center justify-center w-11 h-11 rounded-full bg-neutral-100 hover:bg-neutral-900 hover:text-white transition">
@@ -96,6 +110,7 @@
         <div><a href="writing.html" class="menu-link-item text-2xl sm:text-4xl md:text-5xl font-semibold tracking-tight uppercase hover:text-brand-500">Writing & Publications</a></div>
         <div><a href="convergence-table.html" class="menu-link-item text-2xl sm:text-4xl md:text-5xl font-semibold tracking-tight uppercase text-blue-400 hover:text-white">The Convergence Table</a></div>
         <div><a href="gallery.html" class="menu-link-item text-2xl sm:text-4xl md:text-5xl font-semibold tracking-tight uppercase hover:text-brand-500">Gallery</a></div>
+        <div><a href="endorsements.html" class="menu-link-item text-2xl sm:text-4xl md:text-5xl font-semibold tracking-tight uppercase hover:text-brand-500">Endorsements</a></div>
         <div><a href="contact.html" class="menu-link-item text-2xl sm:text-4xl md:text-5xl font-semibold tracking-tight uppercase hover:text-brand-500">Contact</a></div>
       </nav>
     </div>
@@ -126,9 +141,9 @@
               <!-- Item 1: Governance Strategist -->
               <div class="relative pl-6 sm:pl-10">
                 <span class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-blue-600 border-4 border-white shadow"></span>
-                <span class="text-xs font-bold font-mono uppercase tracking-wider text-brand-700">Jul 2024 – Present</span>
+                <span class="text-xs font-bold font-mono uppercase tracking-wider text-brand-700">Jul 2024 – Jul 2026</span>
                 <h3 class="text-xl font-bold text-gray-900 mt-1">Governance Strategist</h3>
-                <h4 class="text-sm font-semibold text-gray-600">Department of Skill Development &amp; Technical Education &bull; Dhenkanal, Govt. of Odisha</h4>
+                <h4 class="text-sm font-semibold text-gray-600">Department of Skill Development &amp; Technical Education &bull; Dhenkanal, Ex-Govt. of Odisha</h4>
                 <p class="text-xs sm:text-sm text-gray-600 mt-2 leading-relaxed">
                   Steering district-level execution of central and state skilling initiatives. Formulated the Dakhyata Panji live dashboard across 13 line departments; structured the PIA Performance Index tracking 14 agencies; organized 96 on-the-spot job drives delivering 1,803 offers.
                 </p>
@@ -139,9 +154,9 @@
                 <span class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-blue-600 border-4 border-white shadow"></span>
                 <span class="text-xs font-bold font-mono uppercase tracking-wider text-brand-700">Mar 2025 – Feb 2026</span>
                 <h3 class="text-xl font-bold text-gray-900 mt-1">Policy Fellow</h3>
-                <h4 class="text-sm font-semibold text-gray-600">Citizens for Public Leadership (CPL)</h4>
+                <h4 class="text-sm font-semibold text-gray-600">Citizens for Public Leadership (CPL) &bull; Remote</h4>
                 <p class="text-xs sm:text-sm text-gray-600 mt-2 leading-relaxed">
-                  Engaging with senior parliamentarians, civil servants, and policy faculty on institutional bottlenecks in Indian state machinery, generating actionable policy briefs.
+                  Selected for an 11-month national policy fellowship cultivating evidence-based public leadership &mdash; built expertise in multi-stakeholder negotiation, design thinking, advocacy and campaign strategy, adaptive leadership, persuasive policy writing, and strategic communications.
                 </p>
               </div>
 
@@ -149,10 +164,10 @@
               <div class="relative pl-6 sm:pl-10">
                 <span class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-blue-600 border-4 border-white shadow"></span>
                 <span class="text-xs font-bold font-mono uppercase tracking-wider text-brand-700">Jul 2025 – Oct 2025</span>
-                <h3 class="text-xl font-bold text-gray-900 mt-1">Policy Researcher (Diplomacy, Foreign Policy &amp; Geopolitics)</h3>
-                <h4 class="text-sm font-semibold text-gray-600">IMPRI (Impact and Policy Research Institute) &bull; New Delhi</h4>
+                <h3 class="text-xl font-bold text-gray-900 mt-1">Fellow &ndash; Diplomacy, Foreign Policy &amp; Geopolitics</h3>
+                <h4 class="text-sm font-semibold text-gray-600">Impact and Policy Research Institute (IMPRI) &bull; Remote</h4>
                 <p class="text-xs sm:text-sm text-gray-600 mt-2 leading-relaxed">
-                  Researched the intersection of domestic capacity building and international public diplomacy. Published groundbreaking work on narrative credibility in 21st-century multilateral storytelling.
+                  Authored and published &ldquo;Recalibrating Influence: India's International Storytelling and the Challenges of Public Diplomacy in the 21st Century.&rdquo; Developed briefs on South&ndash;South cooperation, Indo-Pacific strategy, and global-governance reform; engaged senior diplomats and scholars including Amb. Shashank, Amb. Latha Reddy, Amb. Anil Trigunayat, and Prof. Swaran Singh (JNU).
                 </p>
               </div>
 
@@ -160,84 +175,156 @@
               <div class="relative pl-6 sm:pl-10">
                 <span class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-blue-600 border-4 border-white shadow"></span>
                 <span class="text-xs font-bold font-mono uppercase tracking-wider text-brand-700">Feb 2024 – Jul 2024</span>
-                <h3 class="text-xl font-bold text-gray-900 mt-1">District &amp; State Civic-Engagement Lead</h3>
-                <h4 class="text-sm font-semibold text-gray-600">Jan Suraaj Young Leaders Program &bull; Bhagalpur, Bihar</h4>
+                <h3 class="text-xl font-bold text-gray-900 mt-1">Young Fellow, Jan Suraaj</h3>
+                <h4 class="text-sm font-semibold text-gray-600">Joy of Giving Global Foundation &bull; Bhagalpur, Bihar</h4>
                 <p class="text-xs sm:text-sm text-gray-600 mt-2 leading-relaxed">
-                  Mobilized youth leaders and civic volunteers across Bhagalpur division; architected community issue councils and grassroots feedback loops during intense political campaigns.
+                  Led district- and state-level rollout of civic-engagement programmes promoting informed political participation, women's digital empowerment, and grassroots accountability. Conducted primary field research and co-created Panchayat-level development plans with elected representatives and local institutions.
                 </p>
               </div>
 
               <!-- Item 5: Independent Research -->
               <div class="relative pl-6 sm:pl-10">
                 <span class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-gray-400 border-4 border-white shadow"></span>
-                <span class="text-xs font-bold font-mono uppercase tracking-wider text-gray-500">Jul 2023 – Feb 2024</span>
-                <h3 class="text-xl font-bold text-gray-900 mt-1">Independent Policy &amp; Development Research</h3>
-                <h4 class="text-sm font-semibold text-gray-600">Pune &bull; Maharashtra &amp; Western India</h4>
+                <span class="text-xs font-bold font-mono uppercase tracking-wider text-gray-500">Jun 2023 – Jan 2024</span>
+                <h3 class="text-xl font-bold text-gray-900 mt-1">Researcher</h3>
+                <h4 class="text-sm font-semibold text-gray-600">Independent Policy Research &bull; Pune, Maharashtra</h4>
                 <p class="text-xs sm:text-sm text-gray-600 mt-2 leading-relaxed">
-                  Field research on administrative decentralization, vocational training drop-out patterns, and localized employment ecosystems.
+                  Conducted a socio-economic impact assessment of NEP 2020 implementation in Tier-2 cities; authored policy briefs on Digital Public Infrastructure in education, and formulated a strategic roadmap to close the education&ndash;employability gap.
                 </p>
               </div>
 
               <!-- Item 6: Gandhi Fellow -->
               <div class="relative pl-6 sm:pl-10">
                 <span class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-gray-400 border-4 border-white shadow"></span>
-                <span class="text-xs font-bold font-mono uppercase tracking-wider text-gray-500">2021 – 2023</span>
+                <span class="text-xs font-bold font-mono uppercase tracking-wider text-gray-500">Jul 2021 – May 2023</span>
                 <h3 class="text-xl font-bold text-gray-900 mt-1">Gandhi Fellow</h3>
-                <h4 class="text-sm font-semibold text-gray-600">Piramal School of Leadership &bull; Jhunjhunu, Rajasthan</h4>
+                <h4 class="text-sm font-semibold text-gray-600">Piramal Foundation &bull; Jhunjhunu, Rajasthan</h4>
                 <p class="text-xs sm:text-sm text-gray-600 mt-2 leading-relaxed">
-                  2-year full-time immersive fellowship. Collaborated directly with Block and District Education Officers to overhaul classroom pedagogy, school management committees (SMCs), and headmaster capacity.
+                  Partnered with the Rajasthan State Education Department to drive academic transformation across 10 remote government schools, directly impacting 1,870 students and 235 teachers. Designed Project-Based Learning modules and anchored the Teacher Learning Lab &mdash; 15 workshops reaching 450 rural educators.
+                </p>
+              </div>
+
+              <!-- Item 7: UN SDSN Advocate -->
+              <div class="relative pl-6 sm:pl-10">
+                <span class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-gray-400 border-4 border-white shadow"></span>
+                <span class="text-xs font-bold font-mono uppercase tracking-wider text-gray-500">Aug 2022 – Feb 2023</span>
+                <h3 class="text-xl font-bold text-gray-900 mt-1">Advocate</h3>
+                <h4 class="text-sm font-semibold text-gray-600">Global Schools Program, UN SDSN &bull; Jhunjhunu, Rajasthan</h4>
+                <p class="text-xs sm:text-sm text-gray-600 mt-2 leading-relaxed">
+                  Authored the India-focused Advocate Toolkit and launched the Changemakers Lab across 10 rural schools; delivered 20+ workshops for 150+ educators on SDG integration. Recognised as &ldquo;Advocate of the Month&rdquo; twice within a 6-month tenure (cohort of 200+).
+                </p>
+              </div>
+
+              <!-- Item 8: Top India -->
+              <div class="relative pl-6 sm:pl-10">
+                <span class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-gray-400 border-4 border-white shadow"></span>
+                <span class="text-xs font-bold font-mono uppercase tracking-wider text-gray-500">Nov 2021 – Oct 2022</span>
+                <h3 class="text-xl font-bold text-gray-900 mt-1">Program Manager</h3>
+                <h4 class="text-sm font-semibold text-gray-600">Top India &bull; Remote</h4>
+                <p class="text-xs sm:text-sm text-gray-600 mt-2 leading-relaxed">
+                  Designed and executed a multi-phase grassroots awareness strategy on Panchayati Raj Institutions; convened focus groups, leader interviews, and a village-level civic march to strengthen youth&ndash;PRI dialogue.
+                </p>
+              </div>
+
+              <!-- Item 9: SPARSH Foundation -->
+              <div class="relative pl-6 sm:pl-10">
+                <span class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-gray-400 border-4 border-white shadow"></span>
+                <span class="text-xs font-bold font-mono uppercase tracking-wider text-gray-500">Nov 2019 – Jun 2021</span>
+                <h3 class="text-xl font-bold text-gray-900 mt-1">Community Outreach</h3>
+                <h4 class="text-sm font-semibold text-gray-600">SPARSH Foundation &bull; Pune, Maharashtra</h4>
+                <p class="text-xs sm:text-sm text-gray-600 mt-2 leading-relaxed">
+                  Outreach and rehabilitation work for trafficked women in Budhwar Peth.
+                </p>
+              </div>
+
+              <!-- Item 10: Aamhi Saare Foundation -->
+              <div class="relative pl-6 sm:pl-10">
+                <span class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-gray-400 border-4 border-white shadow"></span>
+                <span class="text-xs font-bold font-mono uppercase tracking-wider text-gray-500">Jun 2017 – May 2019</span>
+                <h3 class="text-xl font-bold text-gray-900 mt-1">Community Outreach</h3>
+                <h4 class="text-sm font-semibold text-gray-600">Aamhi Saare Foundation &bull; Pune, Maharashtra</h4>
+                <p class="text-xs sm:text-sm text-gray-600 mt-2 leading-relaxed">
+                  WASH and education interventions in tribal communities.
                 </p>
               </div>
 
             </div>
 
-            <!-- Recommendations / Testimonials (2 Cards as requested) -->
+            <!-- Organisations I've Worked With (Logo Marquee) -->
             <div class="border-t border-gray-100 pt-16">
               <div class="mb-8">
-                <span class="text-xs font-bold uppercase tracking-widest text-brand-700">Peer &amp; Leadership Testimonials</span>
-                <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900 mt-1">Recommendations</h2>
+                <span class="text-xs font-bold uppercase tracking-widest text-brand-700">Institutional Network</span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900 mt-1">Organisations I&rsquo;ve Worked With</h2>
               </div>
 
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-
-                <!-- Testimonial 1 -->
-                <div class="card-elevated p-6 sm:p-8 rounded-2xl bg-white space-y-4">
-                  <div class="flex items-center gap-3">
-                    <!-- PLACEHOLDER: Photo of Yugal Kishor K. -->
-                    <div class="relative overflow-hidden w-12 h-12 rounded-full bg-blue-50 text-blue-700 flex items-center justify-center font-bold text-sm"><img src="images/testimonial-yugal-kishor.jpg" alt="Yugal Kishor K." class="absolute inset-0 w-full h-full object-cover rounded-full" onerror="this.remove()">YK</div>
-                    <div>
-                      <h4 class="text-base font-bold text-gray-900">Yugal Kishor K.</h4>
-                      <p class="text-xs text-gray-500">Cohort Colleague &bull; Odisha Governance Network</p>
-                    </div>
-                  </div>
-                  <p class="text-sm text-gray-700 italic leading-relaxed">
-                    &ldquo;Hrishikesh possesses a rare ability to translate knotty policy directives into crisp, automated tracking protocols. His systems-level thinking in developing the Dakhyata Panji framework fundamentally shifted how our cohort approaches inter-departmental convergence.&rdquo;
-                  </p>
-                  <p class="text-[11px] font-mono text-gray-400 border-t border-gray-100 pt-2">
-                    <!-- PLACEHOLDER: Testimonial verified via LinkedIn recommendation -->
-                    Recommendation on Systems Thinking &bull; Fellowship Cohort
-                  </p>
+              <div class="logo-marquee-wrap">
+                <div class="logo-marquee-track">
+              <div class="logo-marquee-set">
+                <div class="logo-marquee-item"><img src="images/logos/isb.png" alt="Indian School of Business (ISB)" loading="lazy"></div>
+                <div class="logo-marquee-item"><img src="images/logos/sppu.png" alt="Savitribai Phule Pune University (SPPU)" loading="lazy"></div>
+                <div class="logo-marquee-item"><img src="images/logos/cpl.png" alt="Citizens for Public Leadership (CPL)" loading="lazy"></div>
+                <div class="logo-marquee-item"><img src="images/logos/directorate-general-of-training.png" alt="Directorate General of Training" loading="lazy"></div>
+                <div class="logo-marquee-item"><img src="images/logos/gandhi-fellowship.png" alt="Gandhi Fellowship" loading="lazy"></div>
+                <div class="logo-marquee-item"><img src="images/logos/impri.png" alt="IMPRI (Impact and Policy Research Institute)" loading="lazy"></div>
+                <div class="logo-marquee-item"><img src="images/logos/jan-suraaj.png" alt="Jan Suraaj" loading="lazy"></div>
+                <div class="logo-marquee-item"><img src="images/logos/kaivalya-education-foundation.png" alt="Kaivalya Education Foundation (KEF)" loading="lazy"></div>
+                <div class="logo-marquee-item"><img src="images/logos/msde.svg" alt="Ministry of Skill Development &amp; Entrepreneurship (MSDE)" loading="lazy"></div>
+                <div class="logo-marquee-item"><img src="images/logos/nua-odisha.png" alt="NUA Odisha" loading="lazy"></div>
+                <div class="logo-marquee-item"><img src="images/logos/nano-unicorn.png" alt="Nano Unicorn" loading="lazy"></div>
+                <div class="logo-marquee-item"><img src="images/logos/pm-ajay.png" alt="PM-AJAY" loading="lazy"></div>
+                <div class="logo-marquee-item"><img src="images/logos/pm-internship-scheme.png" alt="PM Internship Scheme" loading="lazy"></div>
+                <div class="logo-marquee-item"><img src="images/logos/piramal-foundation.png" alt="Piramal Foundation" loading="lazy"></div>
+                <div class="logo-marquee-item"><img src="images/logos/rajasthan-education-department.png" alt="Rajasthan Education Department" loading="lazy"></div>
+                <div class="logo-marquee-item"><img src="images/logos/government-of-odisha.svg" alt="Government of Odisha" loading="lazy"></div>
+                <div class="logo-marquee-item"><img src="images/logos/skill-india.png" alt="Skill India" loading="lazy"></div>
+                <div class="logo-marquee-item"><img src="images/logos/skilled-in-odisha.png" alt="Skilled in Odisha" loading="lazy"></div>
+                <div class="logo-marquee-item"><img src="images/logos/tata-strive.png" alt="Tata STRIVE" loading="lazy"></div>
+                <div class="logo-marquee-item"><img src="images/logos/un-sdsn.png" alt="UN SDSN" loading="lazy"></div>
+                <div class="logo-marquee-item"><img src="images/logos/world-skill-center.png" alt="World Skill Center" loading="lazy"></div>
+                <div class="logo-marquee-item"><img src="images/logos/young-inspirators-network.png" alt="Young Inspirators Network" loading="lazy"></div>
+                <div class="logo-marquee-item"><img src="images/logos/osda.png" alt="Odisha Skill Development Authority (OSDA)" loading="lazy"></div>
+              </div>
+              <div class="logo-marquee-set logo-marquee-duplicate" aria-hidden="true">
+                <div class="logo-marquee-item"><img src="images/logos/isb.png" alt="Indian School of Business (ISB)" loading="lazy"></div>
+                <div class="logo-marquee-item"><img src="images/logos/sppu.png" alt="Savitribai Phule Pune University (SPPU)" loading="lazy"></div>
+                <div class="logo-marquee-item"><img src="images/logos/cpl.png" alt="Citizens for Public Leadership (CPL)" loading="lazy"></div>
+                <div class="logo-marquee-item"><img src="images/logos/directorate-general-of-training.png" alt="Directorate General of Training" loading="lazy"></div>
+                <div class="logo-marquee-item"><img src="images/logos/gandhi-fellowship.png" alt="Gandhi Fellowship" loading="lazy"></div>
+                <div class="logo-marquee-item"><img src="images/logos/impri.png" alt="IMPRI (Impact and Policy Research Institute)" loading="lazy"></div>
+                <div class="logo-marquee-item"><img src="images/logos/jan-suraaj.png" alt="Jan Suraaj" loading="lazy"></div>
+                <div class="logo-marquee-item"><img src="images/logos/kaivalya-education-foundation.png" alt="Kaivalya Education Foundation (KEF)" loading="lazy"></div>
+                <div class="logo-marquee-item"><img src="images/logos/msde.svg" alt="Ministry of Skill Development &amp; Entrepreneurship (MSDE)" loading="lazy"></div>
+                <div class="logo-marquee-item"><img src="images/logos/nua-odisha.png" alt="NUA Odisha" loading="lazy"></div>
+                <div class="logo-marquee-item"><img src="images/logos/nano-unicorn.png" alt="Nano Unicorn" loading="lazy"></div>
+                <div class="logo-marquee-item"><img src="images/logos/pm-ajay.png" alt="PM-AJAY" loading="lazy"></div>
+                <div class="logo-marquee-item"><img src="images/logos/pm-internship-scheme.png" alt="PM Internship Scheme" loading="lazy"></div>
+                <div class="logo-marquee-item"><img src="images/logos/piramal-foundation.png" alt="Piramal Foundation" loading="lazy"></div>
+                <div class="logo-marquee-item"><img src="images/logos/rajasthan-education-department.png" alt="Rajasthan Education Department" loading="lazy"></div>
+                <div class="logo-marquee-item"><img src="images/logos/government-of-odisha.svg" alt="Government of Odisha" loading="lazy"></div>
+                <div class="logo-marquee-item"><img src="images/logos/skill-india.png" alt="Skill India" loading="lazy"></div>
+                <div class="logo-marquee-item"><img src="images/logos/skilled-in-odisha.png" alt="Skilled in Odisha" loading="lazy"></div>
+                <div class="logo-marquee-item"><img src="images/logos/tata-strive.png" alt="Tata STRIVE" loading="lazy"></div>
+                <div class="logo-marquee-item"><img src="images/logos/un-sdsn.png" alt="UN SDSN" loading="lazy"></div>
+                <div class="logo-marquee-item"><img src="images/logos/world-skill-center.png" alt="World Skill Center" loading="lazy"></div>
+                <div class="logo-marquee-item"><img src="images/logos/young-inspirators-network.png" alt="Young Inspirators Network" loading="lazy"></div>
+                <div class="logo-marquee-item"><img src="images/logos/osda.png" alt="Odisha Skill Development Authority (OSDA)" loading="lazy"></div>
+              </div>
                 </div>
+              </div>
+            </div>
 
-                <!-- Testimonial 2 -->
-                <div class="card-elevated p-6 sm:p-8 rounded-2xl bg-white space-y-4">
-                  <div class="flex items-center gap-3">
-                    <!-- PLACEHOLDER: Photo of Raman Jeet -->
-                    <div class="relative overflow-hidden w-12 h-12 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center font-bold text-sm"><img src="images/testimonial-raman-jeet.jpg" alt="Raman Jeet" class="absolute inset-0 w-full h-full object-cover rounded-full" onerror="this.remove()">RJ</div>
-                    <div>
-                      <h4 class="text-base font-bold text-gray-900">Raman Jeet</h4>
-                      <p class="text-xs text-gray-500">Gandhi Fellow Cohort Member &bull; Rural Dev Specialist</p>
-                    </div>
-                  </div>
-                  <p class="text-sm text-gray-700 italic leading-relaxed">
-                    &ldquo;Whether working through sandstorms in Jhunjhunu or navigating high-tempo operations in Bihar and Odisha, Hrishikesh demonstrates an unwavering operational discipline. He doesn't just theorize reform; he stays on the ground until it functions autonomously.&rdquo;
-                  </p>
-                  <p class="text-[11px] font-mono text-gray-400 border-t border-gray-100 pt-2">
-                    <!-- PLACEHOLDER: Testimonial verified via fellowship evaluation -->
-                    Recommendation on Operational Consistency &bull; Gandhi Fellowship
-                  </p>
+            <!-- Endorsements Teaser -->
+            <div class="border-t border-gray-100 pt-16">
+              <div class="bg-gray-50 border border-gray-200 rounded-3xl p-8 sm:p-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+                <div>
+                  <span class="text-xs font-bold uppercase tracking-widest text-brand-700">Peer &amp; Leadership Testimonials</span>
+                  <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900 mt-1">Endorsements</h2>
+                  <p class="text-sm text-gray-600 mt-2 max-w-xl">Read what colleagues and collaborators say — 29 LinkedIn recommendations from fellows, peers, and leaders across governance, education, and public policy.</p>
                 </div>
-
+                <a href="endorsements.html" class="flex-shrink-0 px-6 py-3.5 bg-brand-700 hover:bg-brand-600 text-white font-semibold text-sm rounded-lg shadow-md transition flex items-center gap-2 whitespace-nowrap">
+                  <span>View All Endorsements</span>
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                </a>
               </div>
             </div>
 
@@ -253,7 +340,7 @@
         <div class="lg:col-span-7 space-y-3">
           <span class="text-xs uppercase tracking-widest text-brand-500 font-bold">Execution Philosophy</span>
           <blockquote class="font-serif italic text-2xl sm:text-3xl text-neutral-100">&ldquo;Policy is only as good as its execution.&rdquo;</blockquote>
-          <p class="text-xs text-neutral-400 font-sans">Wakhare Hrishikesh Chandrashekhar &bull; Governance Strategist, Govt. of Odisha &bull; CPL & IMPRI Fellow</p>
+          <p class="text-xs text-neutral-400 font-sans">Hrishikesh A.C Wakhare &bull; Governance Strategist, Ex-Govt. of Odisha &bull; CPL & IMPRI Fellow</p>
         </div>
         <div class="lg:col-span-5 bg-neutral-900 border border-neutral-800 p-6 rounded-2xl">
           <h4 class="text-sm font-semibold text-white mb-1">Strategic Briefings & Updates</h4>
@@ -274,8 +361,12 @@
             <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.98-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.163 6.163 0 100 12.326 6.163 6.163 0 000-12.326zm0 10.162a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
             <span>Instagram (@policydebrief)</span>
           </a>
+          <a href="https://x.com/hryshykesh" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-neutral-300 hover:text-white hover:underline">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            <span>X (@hryshykesh)</span>
+          </a>
         </div>
-        <p>&copy; 2026 Wakhare Hrishikesh Chandrashekhar. All rights reserved. &bull; Pune / Dhenkanal</p>
+        <p>&copy; 2026 Hrishikesh A.C Wakhare. All rights reserved. &bull; Pune / Dhenkanal</p>
       </div>
     </div>
   </footer>

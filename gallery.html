@@ -4,17 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Field & Institutional Gallery | Archival Photos</title>
-  <meta name="description" content="A documentary photo archive of Wakhare Hrishikesh Chandrashekhar's field engagements, district review conventions, fellowship cohorts, and delegation visits.">
+  <meta name="description" content="A documentary photo archive of Hrishikesh A.C Wakhare's field engagements, district review conventions, fellowship cohorts, and delegation visits.">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <!-- Placeholder domain used below (hrishikeshwakhare.com) — update og:url and canonical once the real domain is purchased -->
   <meta property="og:title" content="Field & Institutional Gallery | Archival Photos">
-  <meta property="og:description" content="A documentary photo archive of Wakhare Hrishikesh Chandrashekhar's field engagements, district review conventions, fellowship cohorts, and delegation visits.">
+  <meta property="og:description" content="A documentary photo archive of Hrishikesh A.C Wakhare's field engagements, district review conventions, fellowship cohorts, and delegation visits.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://hrishikeshwakhare.com/gallery.html">
   <meta property="og:image" content="https://hrishikeshwakhare.com/images/home-portrait.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Field & Institutional Gallery | Archival Photos">
-  <meta name="twitter:description" content="A documentary photo archive of Wakhare Hrishikesh Chandrashekhar's field engagements, district review conventions, fellowship cohorts, and delegation visits.">
+  <meta name="twitter:description" content="A documentary photo archive of Hrishikesh A.C Wakhare's field engagements, district review conventions, fellowship cohorts, and delegation visits.">
   <meta name="twitter:image" content="https://hrishikeshwakhare.com/images/home-portrait.jpg">
   <link rel="canonical" href="https://hrishikeshwakhare.com/gallery.html">
   <script src="https://cdn.tailwindcss.com"></script>
@@ -60,7 +60,7 @@
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
       <a href="index.html" class="flex flex-col items-start focus:outline-none">
         <span class="font-extrabold tracking-tight text-lg md:text-xl text-neutral-900 uppercase">
-          WAKHARE HRISHIKESH <span class="font-light text-neutral-500">CHANDRASHEKHAR</span>
+          HRISHIKESH A.C <span class="font-light text-neutral-500">WAKHARE</span>
         </span>
         <span class="text-[10px] md:text-[11px] tracking-widest text-neutral-500 uppercase font-semibold">
           Governance Strategist
@@ -71,6 +71,7 @@
           <a href="about.html" class="hover:text-brand-700 transition">About</a>
           <a href="role-initiatives.html" class="hover:text-brand-700 transition">Role & Initiatives</a>
           <a href="convergence-table.html" class="hover:text-brand-700 transition text-brand-700 font-semibold">&bull; Convergence Table</a>
+          <a href="endorsements.html" class="hover:text-brand-700 transition">Endorsements</a>
           <a href="contact.html" class="hover:text-brand-700 transition">Contact</a>
         </nav>
         <button onclick="toggleMenu(true)" class="flex items-center justify-center w-11 h-11 rounded-full bg-neutral-100 hover:bg-neutral-900 hover:text-white transition">
@@ -96,6 +97,7 @@
         <div><a href="writing.html" class="menu-link-item text-2xl sm:text-4xl md:text-5xl font-semibold tracking-tight uppercase hover:text-brand-500">Writing & Publications</a></div>
         <div><a href="convergence-table.html" class="menu-link-item text-2xl sm:text-4xl md:text-5xl font-semibold tracking-tight uppercase text-blue-400 hover:text-white">The Convergence Table</a></div>
         <div><a href="gallery.html" class="menu-link-item text-2xl sm:text-4xl md:text-5xl font-semibold tracking-tight uppercase hover:text-brand-500">Gallery</a></div>
+        <div><a href="endorsements.html" class="menu-link-item text-2xl sm:text-4xl md:text-5xl font-semibold tracking-tight uppercase hover:text-brand-500">Endorsements</a></div>
         <div><a href="contact.html" class="menu-link-item text-2xl sm:text-4xl md:text-5xl font-semibold tracking-tight uppercase hover:text-brand-500">Contact</a></div>
       </nav>
     </div>
@@ -120,128 +122,165 @@
               </p>
             </div>
 
-            <!-- Filterable Category Tabs (Reference: achyutasamanta.com tabbed photo categories) -->
+            <!-- Filterable Category Tabs -->
             <div class="flex flex-wrap gap-2 border-b border-gray-200 pb-4 text-xs font-semibold">
               <button onclick="filterGallery('all')" class="filter-btn active px-4 py-2 rounded-full border border-gray-200 hover:border-gray-400 transition" data-cat="all">All Photos</button>
-              <button onclick="filterGallery('gov-odisha')" class="filter-btn px-4 py-2 rounded-full border border-gray-200 hover:border-gray-400 transition" data-cat="gov-odisha">Skill Dev &amp; Tech Ed (Odisha)</button>
-              <button onclick="filterGallery('orgs')" class="filter-btn px-4 py-2 rounded-full border border-gray-200 hover:border-gray-400 transition" data-cat="orgs">Organizations Worked With</button>
-              <button onclick="filterGallery('cpl-isb')" class="filter-btn px-4 py-2 rounded-full border border-gray-200 hover:border-gray-400 transition" data-cat="cpl-isb">Citizens for Public Leadership &amp; ISB</button>
-              <button onclick="filterGallery('gandhi')" class="filter-btn px-4 py-2 rounded-full border border-gray-200 hover:border-gray-400 transition" data-cat="gandhi">Gandhi Fellowship (Rajasthan)</button>
-              <button onclick="filterGallery('jansuraaj')" class="filter-btn px-4 py-2 rounded-full border border-gray-200 hover:border-gray-400 transition" data-cat="jansuraaj">Jan Suraaj Young Leader (Bihar)</button>
+              <button onclick="filterGallery('citizens-for-public-leadership')" class="filter-btn px-4 py-2 rounded-full border border-gray-200 hover:border-gray-400 transition" data-cat="citizens-for-public-leadership">Citizens for Public Leadership</button>
+              <button onclick="filterGallery('gandhi-fellowship')" class="filter-btn px-4 py-2 rounded-full border border-gray-200 hover:border-gray-400 transition" data-cat="gandhi-fellowship">Gandhi Fellowship</button>
+              <button onclick="filterGallery('isb-hyderabad')" class="filter-btn px-4 py-2 rounded-full border border-gray-200 hover:border-gray-400 transition" data-cat="isb-hyderabad">ISB Hyderabad</button>
+              <button onclick="filterGallery('jan-suraaj')" class="filter-btn px-4 py-2 rounded-full border border-gray-200 hover:border-gray-400 transition" data-cat="jan-suraaj">Jan Suraaj</button>
+              <button onclick="filterGallery('skill-development-technical-education-odisha')" class="filter-btn px-4 py-2 rounded-full border border-gray-200 hover:border-gray-400 transition" data-cat="skill-development-technical-education-odisha">Skill Development &amp; Technical Education, Odisha</button>
             </div>
 
-            <!-- Photo Grid with Exact Placeholder Ratios & HTML Comments -->
-            <div id="gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-
-              <!-- Item 1: Odisha SDTE -->
-              <div class="gallery-item group card-elevated rounded-2xl overflow-hidden bg-white" data-category="gov-odisha">
-                <!-- PLACEHOLDER: Dhenkanal Mega Job Fair with 1,803 candidates -->
-                <div class="placeholder-box aspect-[4/3] flex flex-col items-center justify-center p-6 text-center"><img src="images/gallery-skilldev-jobfair.jpg" alt="Mega Job Fair Placement Drive" class="absolute inset-0 w-full h-full object-cover" onerror="this.remove()">
-                  <span class="w-10 h-10 rounded-full bg-blue-50 text-brand-700 flex items-center justify-center mb-2 text-xs font-mono">01</span>
-                  <p class="text-xs font-semibold text-gray-800">Mega Job Fair Placement Drive</p>
-                  <p class="text-[10px] font-mono text-gray-400 mt-1">Photo Placeholder (4:3)</p>
-                </div>
-                <div class="p-4 border-t border-gray-100">
-                  <span class="text-[10px] font-bold uppercase tracking-wider text-brand-700">Govt. of Odisha &bull; Dhenkanal</span>
-                  <h4 class="text-sm font-bold text-gray-900 mt-1">On-The-Spot Offer Letter Distribution</h4>
-                  <p class="text-xs text-gray-500 mt-1">Mobilization of 2,879 candidates across tribal blocks for engineering &amp; logistics roles.</p>
-                </div>
-              </div>
-
-              <!-- Item 2: Kaushal Rath -->
-              <div class="gallery-item group card-elevated rounded-2xl overflow-hidden bg-white" data-category="gov-odisha">
-                <!-- PLACEHOLDER: Kaushal Rath Mobile Counseling bus flag-off ceremony -->
-                <div class="placeholder-box aspect-[4/3] flex flex-col items-center justify-center p-6 text-center"><img src="images/gallery-skilldev-kaushalrath.jpg" alt="Kaushal Rath Flag-Off" class="absolute inset-0 w-full h-full object-cover" onerror="this.remove()">
-                  <span class="w-10 h-10 rounded-full bg-blue-50 text-brand-700 flex items-center justify-center mb-2 text-xs font-mono">02</span>
-                  <p class="text-xs font-semibold text-gray-800">Kaushal Rath Flag-Off Ceremony</p>
-                  <p class="text-[10px] font-mono text-gray-400 mt-1">Photo Placeholder (4:3)</p>
-                </div>
-                <div class="p-4 border-t border-gray-100">
-                  <span class="text-[10px] font-bold uppercase tracking-wider text-brand-700">Field Outreach</span>
-                  <h4 class="text-sm font-bold text-gray-900 mt-1">780 km Mobile Counseling Journey</h4>
-                  <p class="text-xs text-gray-500 mt-1">Direct classroom-level career orienting for 6,578 secondary school students.</p>
-                </div>
-              </div>
-
-              <!-- Item 3: CPL Cohort -->
-              <div class="gallery-item group card-elevated rounded-2xl overflow-hidden bg-white" data-category="cpl-isb">
-                <!-- PLACEHOLDER: Citizens for Public Leadership delegation at Constitution Club / Parliament -->
-                <div class="placeholder-box aspect-[4/3] flex flex-col items-center justify-center p-6 text-center"><img src="images/gallery-cpl.jpg" alt="CPL Fellow Delegation" class="absolute inset-0 w-full h-full object-cover" onerror="this.remove()">
-                  <span class="w-10 h-10 rounded-full bg-blue-50 text-brand-700 flex items-center justify-center mb-2 text-xs font-mono">03</span>
-                  <p class="text-xs font-semibold text-gray-800">CPL Fellow Delegation</p>
-                  <p class="text-[10px] font-mono text-gray-400 mt-1">Photo Placeholder (4:3)</p>
-                </div>
-                <div class="p-4 border-t border-gray-100">
-                  <span class="text-[10px] font-bold uppercase tracking-wider text-brand-700">Citizens for Public Leadership</span>
-                  <h4 class="text-sm font-bold text-gray-900 mt-1">Policy Colloquium &amp; Parliamentary Interaction</h4>
-                  <p class="text-xs text-gray-500 mt-1">Debating state legislative capacity with fellows in New Delhi.</p>
-                </div>
-              </div>
-
-              <!-- Item 4: ISB Session -->
-              <div class="gallery-item group card-elevated rounded-2xl overflow-hidden bg-white" data-category="cpl-isb">
-                <!-- PLACEHOLDER: Indian School of Business (ISB) executive classroom lecture -->
-                <div class="placeholder-box aspect-[4/3] flex flex-col items-center justify-center p-6 text-center"><img src="images/gallery-isb.jpg" alt="ISB Executive Session" class="absolute inset-0 w-full h-full object-cover" onerror="this.remove()">
-                  <span class="w-10 h-10 rounded-full bg-blue-50 text-brand-700 flex items-center justify-center mb-2 text-xs font-mono">04</span>
-                  <p class="text-xs font-semibold text-gray-800">ISB Public Policy Executive Session</p>
-                  <p class="text-[10px] font-mono text-gray-400 mt-1">Photo Placeholder (4:3)</p>
-                </div>
-                <div class="p-4 border-t border-gray-100">
-                  <span class="text-[10px] font-bold uppercase tracking-wider text-brand-700">Indian School of Business</span>
-                  <h4 class="text-sm font-bold text-gray-900 mt-1">Understanding Public Policy in India</h4>
-                  <p class="text-xs text-gray-500 mt-1">Case study defense on welfare distribution mechanics.</p>
-                </div>
-              </div>
-
-              <!-- Item 5: Gandhi Fellowship Jhunjhunu -->
-              <div class="gallery-item group card-elevated rounded-2xl overflow-hidden bg-white" data-category="gandhi">
-                <!-- PLACEHOLDER: Village panchayat meeting with school headmasters in Jhunjhunu -->
-                <div class="placeholder-box aspect-[4/3] flex flex-col items-center justify-center p-6 text-center"><img src="images/gallery-gandhi-fellowship.jpg" alt="Gandhi Fellowship Jhunjhunu" class="absolute inset-0 w-full h-full object-cover" onerror="this.remove()">
-                  <span class="w-10 h-10 rounded-full bg-blue-50 text-brand-700 flex items-center justify-center mb-2 text-xs font-mono">05</span>
-                  <p class="text-xs font-semibold text-gray-800">SMC Community Conclave &bull; Rajasthan</p>
-                  <p class="text-[10px] font-mono text-gray-400 mt-1">Photo Placeholder (4:3)</p>
-                </div>
-                <div class="p-4 border-t border-gray-100">
-                  <span class="text-[10px] font-bold uppercase tracking-wider text-brand-700">Gandhi Fellowship (2021)</span>
-                  <h4 class="text-sm font-bold text-gray-900 mt-1">Grassroots Headmaster Capacity Building</h4>
-                  <p class="text-xs text-gray-500 mt-1">Facilitating village-level education development committees across Jhunjhunu.</p>
-                </div>
-              </div>
-
-              <!-- Item 6: Jan Suraaj Bihar -->
-              <div class="gallery-item group card-elevated rounded-2xl overflow-hidden bg-white" data-category="jansuraaj">
-                <!-- PLACEHOLDER: Youth leadership padyatra / workshop in Bhagalpur, Bihar -->
-                <div class="placeholder-box aspect-[4/3] flex flex-col items-center justify-center p-6 text-center"><img src="images/gallery-jansuraaj.jpg" alt="Jan Suraaj Bihar" class="absolute inset-0 w-full h-full object-cover" onerror="this.remove()">
-                  <span class="w-10 h-10 rounded-full bg-blue-50 text-brand-700 flex items-center justify-center mb-2 text-xs font-mono">06</span>
-                  <p class="text-xs font-semibold text-gray-800">Youth Civic Engagement Forum</p>
-                  <p class="text-[10px] font-mono text-gray-400 mt-1">Photo Placeholder (4:3)</p>
-                </div>
-                <div class="p-4 border-t border-gray-100">
-                  <span class="text-[10px] font-bold uppercase tracking-wider text-brand-700">Jan Suraaj Young Leaders</span>
-                  <h4 class="text-sm font-bold text-gray-900 mt-1">Bhagalpur District Civic Convergence</h4>
-                  <p class="text-xs text-gray-500 mt-1">Orchestrating civic volunteer cells to document block-level agrarian grievances.</p>
-                </div>
-              </div>
-
-              <!-- Item 7: Organizations -->
-              <div class="gallery-item group card-elevated rounded-2xl overflow-hidden bg-white" data-category="orgs">
-                <!-- PLACEHOLDER: Round-table with industrial partners (Dual System of Training) -->
-                <div class="placeholder-box aspect-[4/3] flex flex-col items-center justify-center p-6 text-center"><img src="images/gallery-organizations.jpg" alt="Industry Roundtable" class="absolute inset-0 w-full h-full object-cover" onerror="this.remove()">
-                  <span class="w-10 h-10 rounded-full bg-blue-50 text-brand-700 flex items-center justify-center mb-2 text-xs font-mono">07</span>
-                  <p class="text-xs font-semibold text-gray-800">Industry Roundtable (DST MoUs)</p>
-                  <p class="text-[10px] font-mono text-gray-400 mt-1">Photo Placeholder (4:3)</p>
-                </div>
-                <div class="p-4 border-t border-gray-100">
-                  <span class="text-[10px] font-bold uppercase tracking-wider text-brand-700">Institutions &amp; Industry</span>
-                  <h4 class="text-sm font-bold text-gray-900 mt-1">11 Heavy Industry Partnerships</h4>
-                  <p class="text-xs text-gray-500 mt-1">Formalizing dual-training apprenticeship seats across Dhenkanal ITIs.</p>
-                </div>
-              </div>
-
+            <!-- Masonry Photo Grid -->
+            <div id="gallery-grid" class="columns-1 sm:columns-2 lg:columns-3 gap-4">
+              <img src="images/gallery/citizens-for-public-leadership/01.jpg" alt="Citizens for Public Leadership photo 1" loading="lazy" data-category="citizens-for-public-leadership" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/citizens-for-public-leadership/02.jpg" alt="Citizens for Public Leadership photo 2" loading="lazy" data-category="citizens-for-public-leadership" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/citizens-for-public-leadership/03.jpg" alt="Citizens for Public Leadership photo 3" loading="lazy" data-category="citizens-for-public-leadership" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/citizens-for-public-leadership/04.jpg" alt="Citizens for Public Leadership photo 4" loading="lazy" data-category="citizens-for-public-leadership" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/citizens-for-public-leadership/05.jpg" alt="Citizens for Public Leadership photo 5" loading="lazy" data-category="citizens-for-public-leadership" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/citizens-for-public-leadership/06.jpg" alt="Citizens for Public Leadership photo 6" loading="lazy" data-category="citizens-for-public-leadership" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/gandhi-fellowship/01.jpg" alt="Gandhi Fellowship photo 1" loading="lazy" data-category="gandhi-fellowship" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/gandhi-fellowship/02.jpg" alt="Gandhi Fellowship photo 2" loading="lazy" data-category="gandhi-fellowship" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/gandhi-fellowship/03.jpg" alt="Gandhi Fellowship photo 3" loading="lazy" data-category="gandhi-fellowship" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/gandhi-fellowship/04.jpg" alt="Gandhi Fellowship photo 4" loading="lazy" data-category="gandhi-fellowship" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/gandhi-fellowship/05.jpg" alt="Gandhi Fellowship photo 5" loading="lazy" data-category="gandhi-fellowship" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/gandhi-fellowship/06.jpg" alt="Gandhi Fellowship photo 6" loading="lazy" data-category="gandhi-fellowship" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/gandhi-fellowship/07.jpg" alt="Gandhi Fellowship photo 7" loading="lazy" data-category="gandhi-fellowship" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/gandhi-fellowship/08.jpg" alt="Gandhi Fellowship photo 8" loading="lazy" data-category="gandhi-fellowship" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/gandhi-fellowship/09.jpg" alt="Gandhi Fellowship photo 9" loading="lazy" data-category="gandhi-fellowship" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/gandhi-fellowship/10.jpg" alt="Gandhi Fellowship photo 10" loading="lazy" data-category="gandhi-fellowship" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/gandhi-fellowship/11.jpg" alt="Gandhi Fellowship photo 11" loading="lazy" data-category="gandhi-fellowship" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/gandhi-fellowship/12.jpg" alt="Gandhi Fellowship photo 12" loading="lazy" data-category="gandhi-fellowship" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/gandhi-fellowship/13.jpg" alt="Gandhi Fellowship photo 13" loading="lazy" data-category="gandhi-fellowship" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/gandhi-fellowship/14.jpg" alt="Gandhi Fellowship photo 14" loading="lazy" data-category="gandhi-fellowship" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/gandhi-fellowship/15.jpg" alt="Gandhi Fellowship photo 15" loading="lazy" data-category="gandhi-fellowship" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/gandhi-fellowship/16.jpg" alt="Gandhi Fellowship photo 16" loading="lazy" data-category="gandhi-fellowship" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/gandhi-fellowship/17.jpg" alt="Gandhi Fellowship photo 17" loading="lazy" data-category="gandhi-fellowship" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/gandhi-fellowship/18.jpg" alt="Gandhi Fellowship photo 18" loading="lazy" data-category="gandhi-fellowship" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/gandhi-fellowship/19.jpg" alt="Gandhi Fellowship photo 19" loading="lazy" data-category="gandhi-fellowship" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/gandhi-fellowship/20.jpg" alt="Gandhi Fellowship photo 20" loading="lazy" data-category="gandhi-fellowship" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/gandhi-fellowship/21.jpg" alt="Gandhi Fellowship photo 21" loading="lazy" data-category="gandhi-fellowship" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/gandhi-fellowship/22.jpg" alt="Gandhi Fellowship photo 22" loading="lazy" data-category="gandhi-fellowship" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/gandhi-fellowship/23.jpg" alt="Gandhi Fellowship photo 23" loading="lazy" data-category="gandhi-fellowship" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/gandhi-fellowship/24.jpg" alt="Gandhi Fellowship photo 24" loading="lazy" data-category="gandhi-fellowship" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/gandhi-fellowship/25.jpg" alt="Gandhi Fellowship photo 25" loading="lazy" data-category="gandhi-fellowship" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/gandhi-fellowship/26.jpg" alt="Gandhi Fellowship photo 26" loading="lazy" data-category="gandhi-fellowship" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/gandhi-fellowship/27.jpg" alt="Gandhi Fellowship photo 27" loading="lazy" data-category="gandhi-fellowship" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/isb-hyderabad/01.jpg" alt="ISB Hyderabad photo 1" loading="lazy" data-category="isb-hyderabad" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/isb-hyderabad/02.jpg" alt="ISB Hyderabad photo 2" loading="lazy" data-category="isb-hyderabad" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/isb-hyderabad/03.jpg" alt="ISB Hyderabad photo 3" loading="lazy" data-category="isb-hyderabad" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/isb-hyderabad/04.jpg" alt="ISB Hyderabad photo 4" loading="lazy" data-category="isb-hyderabad" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/isb-hyderabad/05.jpg" alt="ISB Hyderabad photo 5" loading="lazy" data-category="isb-hyderabad" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/isb-hyderabad/06.jpg" alt="ISB Hyderabad photo 6" loading="lazy" data-category="isb-hyderabad" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/isb-hyderabad/07.jpg" alt="ISB Hyderabad photo 7" loading="lazy" data-category="isb-hyderabad" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/isb-hyderabad/08.jpg" alt="ISB Hyderabad photo 8" loading="lazy" data-category="isb-hyderabad" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/isb-hyderabad/09.jpg" alt="ISB Hyderabad photo 9" loading="lazy" data-category="isb-hyderabad" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/isb-hyderabad/10.jpg" alt="ISB Hyderabad photo 10" loading="lazy" data-category="isb-hyderabad" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/isb-hyderabad/11.jpg" alt="ISB Hyderabad photo 11" loading="lazy" data-category="isb-hyderabad" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/isb-hyderabad/12.jpg" alt="ISB Hyderabad photo 12" loading="lazy" data-category="isb-hyderabad" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/isb-hyderabad/13.jpg" alt="ISB Hyderabad photo 13" loading="lazy" data-category="isb-hyderabad" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/isb-hyderabad/14.jpg" alt="ISB Hyderabad photo 14" loading="lazy" data-category="isb-hyderabad" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/isb-hyderabad/15.jpg" alt="ISB Hyderabad photo 15" loading="lazy" data-category="isb-hyderabad" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/isb-hyderabad/16.jpg" alt="ISB Hyderabad photo 16" loading="lazy" data-category="isb-hyderabad" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/isb-hyderabad/17.jpg" alt="ISB Hyderabad photo 17" loading="lazy" data-category="isb-hyderabad" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/jan-suraaj/01.jpg" alt="Jan Suraaj photo 1" loading="lazy" data-category="jan-suraaj" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/jan-suraaj/02.jpg" alt="Jan Suraaj photo 2" loading="lazy" data-category="jan-suraaj" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/jan-suraaj/03.jpg" alt="Jan Suraaj photo 3" loading="lazy" data-category="jan-suraaj" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/jan-suraaj/04.jpg" alt="Jan Suraaj photo 4" loading="lazy" data-category="jan-suraaj" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/skill-development-technical-education-odisha/01.jpg" alt="Skill Development &amp; Technical Education, Odisha photo 1" loading="lazy" data-category="skill-development-technical-education-odisha" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/skill-development-technical-education-odisha/02.jpg" alt="Skill Development &amp; Technical Education, Odisha photo 2" loading="lazy" data-category="skill-development-technical-education-odisha" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/skill-development-technical-education-odisha/03.jpg" alt="Skill Development &amp; Technical Education, Odisha photo 3" loading="lazy" data-category="skill-development-technical-education-odisha" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/skill-development-technical-education-odisha/04.jpg" alt="Skill Development &amp; Technical Education, Odisha photo 4" loading="lazy" data-category="skill-development-technical-education-odisha" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/skill-development-technical-education-odisha/05.jpg" alt="Skill Development &amp; Technical Education, Odisha photo 5" loading="lazy" data-category="skill-development-technical-education-odisha" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/skill-development-technical-education-odisha/06.jpg" alt="Skill Development &amp; Technical Education, Odisha photo 6" loading="lazy" data-category="skill-development-technical-education-odisha" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/skill-development-technical-education-odisha/07.jpg" alt="Skill Development &amp; Technical Education, Odisha photo 7" loading="lazy" data-category="skill-development-technical-education-odisha" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/skill-development-technical-education-odisha/08.jpg" alt="Skill Development &amp; Technical Education, Odisha photo 8" loading="lazy" data-category="skill-development-technical-education-odisha" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/skill-development-technical-education-odisha/09.jpg" alt="Skill Development &amp; Technical Education, Odisha photo 9" loading="lazy" data-category="skill-development-technical-education-odisha" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/skill-development-technical-education-odisha/10.jpg" alt="Skill Development &amp; Technical Education, Odisha photo 10" loading="lazy" data-category="skill-development-technical-education-odisha" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/skill-development-technical-education-odisha/11.jpg" alt="Skill Development &amp; Technical Education, Odisha photo 11" loading="lazy" data-category="skill-development-technical-education-odisha" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/skill-development-technical-education-odisha/12.jpg" alt="Skill Development &amp; Technical Education, Odisha photo 12" loading="lazy" data-category="skill-development-technical-education-odisha" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/skill-development-technical-education-odisha/13.jpg" alt="Skill Development &amp; Technical Education, Odisha photo 13" loading="lazy" data-category="skill-development-technical-education-odisha" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/skill-development-technical-education-odisha/14.jpg" alt="Skill Development &amp; Technical Education, Odisha photo 14" loading="lazy" data-category="skill-development-technical-education-odisha" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/skill-development-technical-education-odisha/15.jpg" alt="Skill Development &amp; Technical Education, Odisha photo 15" loading="lazy" data-category="skill-development-technical-education-odisha" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/skill-development-technical-education-odisha/16.jpg" alt="Skill Development &amp; Technical Education, Odisha photo 16" loading="lazy" data-category="skill-development-technical-education-odisha" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/skill-development-technical-education-odisha/17.jpg" alt="Skill Development &amp; Technical Education, Odisha photo 17" loading="lazy" data-category="skill-development-technical-education-odisha" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/skill-development-technical-education-odisha/18.jpg" alt="Skill Development &amp; Technical Education, Odisha photo 18" loading="lazy" data-category="skill-development-technical-education-odisha" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/skill-development-technical-education-odisha/19.jpg" alt="Skill Development &amp; Technical Education, Odisha photo 19" loading="lazy" data-category="skill-development-technical-education-odisha" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/skill-development-technical-education-odisha/20.jpg" alt="Skill Development &amp; Technical Education, Odisha photo 20" loading="lazy" data-category="skill-development-technical-education-odisha" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/skill-development-technical-education-odisha/21.jpg" alt="Skill Development &amp; Technical Education, Odisha photo 21" loading="lazy" data-category="skill-development-technical-education-odisha" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/skill-development-technical-education-odisha/22.jpg" alt="Skill Development &amp; Technical Education, Odisha photo 22" loading="lazy" data-category="skill-development-technical-education-odisha" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/skill-development-technical-education-odisha/23.jpg" alt="Skill Development &amp; Technical Education, Odisha photo 23" loading="lazy" data-category="skill-development-technical-education-odisha" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/skill-development-technical-education-odisha/24.jpg" alt="Skill Development &amp; Technical Education, Odisha photo 24" loading="lazy" data-category="skill-development-technical-education-odisha" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/skill-development-technical-education-odisha/25.jpg" alt="Skill Development &amp; Technical Education, Odisha photo 25" loading="lazy" data-category="skill-development-technical-education-odisha" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/skill-development-technical-education-odisha/26.jpg" alt="Skill Development &amp; Technical Education, Odisha photo 26" loading="lazy" data-category="skill-development-technical-education-odisha" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/skill-development-technical-education-odisha/27.jpg" alt="Skill Development &amp; Technical Education, Odisha photo 27" loading="lazy" data-category="skill-development-technical-education-odisha" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/skill-development-technical-education-odisha/28.jpg" alt="Skill Development &amp; Technical Education, Odisha photo 28" loading="lazy" data-category="skill-development-technical-education-odisha" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/skill-development-technical-education-odisha/29.jpg" alt="Skill Development &amp; Technical Education, Odisha photo 29" loading="lazy" data-category="skill-development-technical-education-odisha" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/skill-development-technical-education-odisha/30.jpg" alt="Skill Development &amp; Technical Education, Odisha photo 30" loading="lazy" data-category="skill-development-technical-education-odisha" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/skill-development-technical-education-odisha/31.jpg" alt="Skill Development &amp; Technical Education, Odisha photo 31" loading="lazy" data-category="skill-development-technical-education-odisha" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/skill-development-technical-education-odisha/32.jpg" alt="Skill Development &amp; Technical Education, Odisha photo 32" loading="lazy" data-category="skill-development-technical-education-odisha" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/skill-development-technical-education-odisha/33.jpg" alt="Skill Development &amp; Technical Education, Odisha photo 33" loading="lazy" data-category="skill-development-technical-education-odisha" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/skill-development-technical-education-odisha/34.jpg" alt="Skill Development &amp; Technical Education, Odisha photo 34" loading="lazy" data-category="skill-development-technical-education-odisha" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/skill-development-technical-education-odisha/35.jpg" alt="Skill Development &amp; Technical Education, Odisha photo 35" loading="lazy" data-category="skill-development-technical-education-odisha" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/skill-development-technical-education-odisha/36.jpg" alt="Skill Development &amp; Technical Education, Odisha photo 36" loading="lazy" data-category="skill-development-technical-education-odisha" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/skill-development-technical-education-odisha/37.jpg" alt="Skill Development &amp; Technical Education, Odisha photo 37" loading="lazy" data-category="skill-development-technical-education-odisha" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/skill-development-technical-education-odisha/38.jpg" alt="Skill Development &amp; Technical Education, Odisha photo 38" loading="lazy" data-category="skill-development-technical-education-odisha" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/skill-development-technical-education-odisha/39.jpg" alt="Skill Development &amp; Technical Education, Odisha photo 39" loading="lazy" data-category="skill-development-technical-education-odisha" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/skill-development-technical-education-odisha/40.jpg" alt="Skill Development &amp; Technical Education, Odisha photo 40" loading="lazy" data-category="skill-development-technical-education-odisha" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/skill-development-technical-education-odisha/41.jpg" alt="Skill Development &amp; Technical Education, Odisha photo 41" loading="lazy" data-category="skill-development-technical-education-odisha" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/skill-development-technical-education-odisha/42.jpg" alt="Skill Development &amp; Technical Education, Odisha photo 42" loading="lazy" data-category="skill-development-technical-education-odisha" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/skill-development-technical-education-odisha/43.jpg" alt="Skill Development &amp; Technical Education, Odisha photo 43" loading="lazy" data-category="skill-development-technical-education-odisha" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/skill-development-technical-education-odisha/44.jpg" alt="Skill Development &amp; Technical Education, Odisha photo 44" loading="lazy" data-category="skill-development-technical-education-odisha" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/skill-development-technical-education-odisha/45.jpg" alt="Skill Development &amp; Technical Education, Odisha photo 45" loading="lazy" data-category="skill-development-technical-education-odisha" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/skill-development-technical-education-odisha/46.jpg" alt="Skill Development &amp; Technical Education, Odisha photo 46" loading="lazy" data-category="skill-development-technical-education-odisha" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/skill-development-technical-education-odisha/47.jpg" alt="Skill Development &amp; Technical Education, Odisha photo 47" loading="lazy" data-category="skill-development-technical-education-odisha" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/skill-development-technical-education-odisha/48.jpg" alt="Skill Development &amp; Technical Education, Odisha photo 48" loading="lazy" data-category="skill-development-technical-education-odisha" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/skill-development-technical-education-odisha/49.jpg" alt="Skill Development &amp; Technical Education, Odisha photo 49" loading="lazy" data-category="skill-development-technical-education-odisha" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/skill-development-technical-education-odisha/50.jpg" alt="Skill Development &amp; Technical Education, Odisha photo 50" loading="lazy" data-category="skill-development-technical-education-odisha" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/skill-development-technical-education-odisha/51.jpg" alt="Skill Development &amp; Technical Education, Odisha photo 51" loading="lazy" data-category="skill-development-technical-education-odisha" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/skill-development-technical-education-odisha/52.jpg" alt="Skill Development &amp; Technical Education, Odisha photo 52" loading="lazy" data-category="skill-development-technical-education-odisha" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/skill-development-technical-education-odisha/53.jpg" alt="Skill Development &amp; Technical Education, Odisha photo 53" loading="lazy" data-category="skill-development-technical-education-odisha" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/skill-development-technical-education-odisha/54.jpg" alt="Skill Development &amp; Technical Education, Odisha photo 54" loading="lazy" data-category="skill-development-technical-education-odisha" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/skill-development-technical-education-odisha/55.jpg" alt="Skill Development &amp; Technical Education, Odisha photo 55" loading="lazy" data-category="skill-development-technical-education-odisha" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/skill-development-technical-education-odisha/56.jpg" alt="Skill Development &amp; Technical Education, Odisha photo 56" loading="lazy" data-category="skill-development-technical-education-odisha" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/skill-development-technical-education-odisha/57.jpg" alt="Skill Development &amp; Technical Education, Odisha photo 57" loading="lazy" data-category="skill-development-technical-education-odisha" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/skill-development-technical-education-odisha/58.jpg" alt="Skill Development &amp; Technical Education, Odisha photo 58" loading="lazy" data-category="skill-development-technical-education-odisha" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/skill-development-technical-education-odisha/59.jpg" alt="Skill Development &amp; Technical Education, Odisha photo 59" loading="lazy" data-category="skill-development-technical-education-odisha" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/skill-development-technical-education-odisha/60.jpg" alt="Skill Development &amp; Technical Education, Odisha photo 60" loading="lazy" data-category="skill-development-technical-education-odisha" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/skill-development-technical-education-odisha/61.jpg" alt="Skill Development &amp; Technical Education, Odisha photo 61" loading="lazy" data-category="skill-development-technical-education-odisha" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/skill-development-technical-education-odisha/62.jpg" alt="Skill Development &amp; Technical Education, Odisha photo 62" loading="lazy" data-category="skill-development-technical-education-odisha" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/skill-development-technical-education-odisha/63.jpg" alt="Skill Development &amp; Technical Education, Odisha photo 63" loading="lazy" data-category="skill-development-technical-education-odisha" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/skill-development-technical-education-odisha/64.jpg" alt="Skill Development &amp; Technical Education, Odisha photo 64" loading="lazy" data-category="skill-development-technical-education-odisha" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/skill-development-technical-education-odisha/65.jpg" alt="Skill Development &amp; Technical Education, Odisha photo 65" loading="lazy" data-category="skill-development-technical-education-odisha" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/skill-development-technical-education-odisha/66.jpg" alt="Skill Development &amp; Technical Education, Odisha photo 66" loading="lazy" data-category="skill-development-technical-education-odisha" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/skill-development-technical-education-odisha/67.jpg" alt="Skill Development &amp; Technical Education, Odisha photo 67" loading="lazy" data-category="skill-development-technical-education-odisha" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/skill-development-technical-education-odisha/68.jpg" alt="Skill Development &amp; Technical Education, Odisha photo 68" loading="lazy" data-category="skill-development-technical-education-odisha" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/skill-development-technical-education-odisha/69.jpg" alt="Skill Development &amp; Technical Education, Odisha photo 69" loading="lazy" data-category="skill-development-technical-education-odisha" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/skill-development-technical-education-odisha/70.jpg" alt="Skill Development &amp; Technical Education, Odisha photo 70" loading="lazy" data-category="skill-development-technical-education-odisha" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/skill-development-technical-education-odisha/71.jpg" alt="Skill Development &amp; Technical Education, Odisha photo 71" loading="lazy" data-category="skill-development-technical-education-odisha" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/skill-development-technical-education-odisha/72.jpg" alt="Skill Development &amp; Technical Education, Odisha photo 72" loading="lazy" data-category="skill-development-technical-education-odisha" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/skill-development-technical-education-odisha/73.jpg" alt="Skill Development &amp; Technical Education, Odisha photo 73" loading="lazy" data-category="skill-development-technical-education-odisha" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
+              <img src="images/gallery/skill-development-technical-education-odisha/74.jpg" alt="Skill Development &amp; Technical Education, Odisha photo 74" loading="lazy" data-category="skill-development-technical-education-odisha" class="gallery-photo w-full rounded-2xl mb-4 break-inside-avoid cursor-pointer hover:opacity-90 transition" onclick="openLightbox(event)">
             </div>
 
           </div>
         </div>
+
+        <!-- Lightbox -->
+        <div id="lightbox" class="hidden fixed inset-0 z-[100] bg-black/95 flex items-center justify-center p-4 sm:p-10" onclick="if(event.target===this) closeLightbox()">
+          <button onclick="closeLightbox()" class="absolute top-4 right-4 sm:top-6 sm:right-6 w-11 h-11 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+          </button>
+          <button onclick="lightboxPrev()" class="absolute left-2 sm:left-6 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+          </button>
+          <button onclick="lightboxNext()" class="absolute right-2 sm:right-6 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+          </button>
+          <img id="lightbox-img" src="" alt="" class="max-w-full max-h-full object-contain rounded-lg">
+        </div>
+
       
   </main>
 
@@ -252,7 +291,7 @@
         <div class="lg:col-span-7 space-y-3">
           <span class="text-xs uppercase tracking-widest text-brand-500 font-bold">Execution Philosophy</span>
           <blockquote class="font-serif italic text-2xl sm:text-3xl text-neutral-100">&ldquo;Policy is only as good as its execution.&rdquo;</blockquote>
-          <p class="text-xs text-neutral-400 font-sans">Wakhare Hrishikesh Chandrashekhar &bull; Governance Strategist, Govt. of Odisha &bull; CPL & IMPRI Fellow</p>
+          <p class="text-xs text-neutral-400 font-sans">Hrishikesh A.C Wakhare &bull; Governance Strategist, Ex-Govt. of Odisha &bull; CPL & IMPRI Fellow</p>
         </div>
         <div class="lg:col-span-5 bg-neutral-900 border border-neutral-800 p-6 rounded-2xl">
           <h4 class="text-sm font-semibold text-white mb-1">Strategic Briefings & Updates</h4>
@@ -273,8 +312,12 @@
             <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.98-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.163 6.163 0 100 12.326 6.163 6.163 0 000-12.326zm0 10.162a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
             <span>Instagram (@policydebrief)</span>
           </a>
+          <a href="https://x.com/hryshykesh" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-neutral-300 hover:text-white hover:underline">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            <span>X (@hryshykesh)</span>
+          </a>
         </div>
-        <p>&copy; 2026 Wakhare Hrishikesh Chandrashekhar. All rights reserved. &bull; Pune / Dhenkanal</p>
+        <p>&copy; 2026 Hrishikesh A.C Wakhare. All rights reserved. &bull; Pune / Dhenkanal</p>
       </div>
     </div>
   </footer>
@@ -292,6 +335,69 @@
     function navigateTo(page) {
       window.location.href = page;
     }
+
+    let currentFilter = 'all';
+    let lightboxIndex = 0;
+
+    function getVisiblePhotos() {
+      return Array.from(document.querySelectorAll('#gallery-grid img.gallery-photo'))
+        .filter(img => currentFilter === 'all' || img.dataset.category === currentFilter);
+    }
+
+    function filterGallery(cat) {
+      currentFilter = cat;
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.cat === cat);
+      });
+      document.querySelectorAll('#gallery-grid img.gallery-photo').forEach(img => {
+        img.style.display = (cat === 'all' || img.dataset.category === cat) ? '' : 'none';
+      });
+    }
+
+    function showLightboxImage() {
+      const photos = getVisiblePhotos();
+      if (photos.length === 0) return;
+      const img = photos[lightboxIndex];
+      const lbImg = document.getElementById('lightbox-img');
+      lbImg.src = img.src;
+      lbImg.alt = img.alt;
+    }
+
+    function openLightbox(event) {
+      const photos = getVisiblePhotos();
+      lightboxIndex = photos.indexOf(event.target);
+      if (lightboxIndex === -1) lightboxIndex = 0;
+      showLightboxImage();
+      document.getElementById('lightbox').classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+
+    function lightboxPrev() {
+      const photos = getVisiblePhotos();
+      if (photos.length === 0) return;
+      lightboxIndex = (lightboxIndex - 1 + photos.length) % photos.length;
+      showLightboxImage();
+    }
+
+    function lightboxNext() {
+      const photos = getVisiblePhotos();
+      if (photos.length === 0) return;
+      lightboxIndex = (lightboxIndex + 1) % photos.length;
+      showLightboxImage();
+    }
+
+    document.addEventListener('keydown', (e) => {
+      const lb = document.getElementById('lightbox');
+      if (lb.classList.contains('hidden')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') lightboxPrev();
+      if (e.key === 'ArrowRight') lightboxNext();
+    });
   </script>
 </body>
 </html>
