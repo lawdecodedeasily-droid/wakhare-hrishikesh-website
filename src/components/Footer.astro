@@ -1,0 +1,75 @@
+---
+import { LINKS, SITE_NAME } from '../config';
+
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p class="footer-line-1">{SITE_NAME} — Public Policy &amp; Development Practitioner</p>
+    <nav class="footer-links" aria-label="Footer">
+      <a href={`mailto:${LINKS.email}`}>Email</a>
+      <span class="sep" aria-hidden="true">·</span>
+      <a href={LINKS.linkedin} target="_blank" rel="noopener">LinkedIn</a>
+      <span class="sep" aria-hidden="true">·</span>
+      <a href={LINKS.instagram} target="_blank" rel="noopener">Policy Debrief</a>
+      <span class="sep" aria-hidden="true">·</span>
+      <a href={LINKS.x} target="_blank" rel="noopener">X</a>
+      <span class="sep" aria-hidden="true">·</span>
+      <a href="/gallery">Gallery</a>
+    </nav>
+    <p class="footer-line-3">&copy; {year} {SITE_NAME}</p>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background-color: var(--ink);
+    color: #ffffff;
+  }
+
+  .footer-inner {
+    padding-block: var(--space-8);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    text-align: center;
+  }
+
+  .footer-line-1 {
+    font-family: var(--font-serif);
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
+    max-width: none;
+  }
+
+  .footer-links {
+    font-family: var(--font-sans);
+    font-size: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-2);
+  }
+
+  .footer-links a {
+    color: #ffffff;
+    opacity: 0.85;
+  }
+
+  .footer-links a:hover {
+    opacity: 1;
+  }
+
+  .footer-links .sep {
+    opacity: 0.4;
+  }
+
+  .footer-line-3 {
+    font-family: var(--font-sans);
+    font-size: 13px;
+    opacity: 0.6;
+    margin: 0;
+  }
+</style>
