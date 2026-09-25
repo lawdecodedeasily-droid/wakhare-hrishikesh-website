@@ -4,3 +4,8 @@ desktop.ini
 
 # Raw client media (originals, unoptimised, never served) — optimised copies live in images/
 Testimonial_s for Website(Hrishikesh)/
+
+# Redesign planning docs — internal only, not for the public repo
+REDESIGN-PROMPT.md
+REDESIGN-BRIEF.md
+OPEN-QUESTIONS.md
