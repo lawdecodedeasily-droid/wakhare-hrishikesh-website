@@ -229,6 +229,31 @@
       return cut.replace(/[,;:\-–—]+$/, '').trim();
     }
 
+    function splitLead(text) {
+      const commaIdx = text.indexOf(',');
+      if (commaIdx > 12 && commaIdx < 75) {
+        return [text.slice(0, commaIdx + 1), text.slice(commaIdx + 1)];
+      }
+      const words = text.split(' ');
+      const n = Math.min(6, words.length);
+      const lead = words.slice(0, n).join(' ');
+      return [lead, text.slice(lead.length)];
+    }
+
+    function buildCaptionText(text) {
+      const frag = document.createDocumentFragment();
+      const [lead, rest] = splitLead(text);
+      const leadSpan = document.createElement('span');
+      leadSpan.className = 'font-semibold text-gray-900';
+      leadSpan.textContent = lead;
+      const restSpan = document.createElement('span');
+      restSpan.className = 'text-gray-500 font-normal';
+      restSpan.textContent = rest;
+      frag.appendChild(leadSpan);
+      frag.appendChild(restSpan);
+      return frag;
+    }
+
     function renderGallery(photos) {
       const grid = document.getElementById('gallery-grid');
       grid.innerHTML = '';
@@ -241,7 +266,10 @@
           : `${CATEGORY_LABELS[p.category] || p.category} photo ${n}`;
 
         const wrap = document.createElement('div');
-        wrap.className = 'mb-5 break-inside-avoid group';
+        wrap.className = 'mb-5 break-inside-avoid group card-elevated rounded-2xl overflow-hidden bg-white';
+
+        const imgWrap = document.createElement('div');
+        imgWrap.className = 'overflow-hidden';
 
         const img = document.createElement('img');
         img.src = p.file;
@@ -249,39 +277,50 @@
         img.loading = 'lazy';
         img.dataset.category = p.category;
         img.dataset.caption = p.caption || '';
-        img.className = 'gallery-photo w-full rounded-2xl cursor-pointer hover:opacity-90 transition';
+        img.className = 'gallery-photo w-full block cursor-pointer transition-transform duration-300 ease-out group-hover:scale-105';
         img.addEventListener('click', openLightbox);
-        wrap.appendChild(img);
+        imgWrap.appendChild(img);
+        wrap.appendChild(imgWrap);
+
+        const capBox = document.createElement('div');
+        capBox.className = 'px-4 py-3.5 border-t border-gray-100 bg-white group-hover:bg-blue-50/40 transition-colors duration-200';
+
+        const chip = document.createElement('span');
+        chip.className = 'inline-block text-[10px] font-bold uppercase tracking-wide text-brand-700 bg-blue-50 px-2 py-0.5 rounded-full mb-2';
+        chip.textContent = CATEGORY_LABELS[p.category] || p.category;
+        capBox.appendChild(chip);
 
         const fullText = (p.caption || '').trim();
         if (fullText) {
           const capEl = document.createElement('p');
-          capEl.className = 'mt-2.5 text-sm text-gray-600 leading-relaxed group-hover:text-gray-900 transition-colors duration-200';
+          capEl.className = 'text-sm leading-relaxed';
 
           const needsTruncation = fullText.length > CAPTION_CHAR_BUDGET;
-          if (!needsTruncation) {
-            capEl.textContent = fullText;
-          } else {
-            const shortText = truncateAtWord(fullText, CAPTION_CHAR_BUDGET);
-            const textSpan = document.createElement('span');
-            textSpan.textContent = shortText + '… ';
+          const shortText = needsTruncation ? truncateAtWord(fullText, CAPTION_CHAR_BUDGET) + '…' : fullText;
+          capEl.appendChild(buildCaptionText(shortText));
+
+          if (needsTruncation) {
             const toggleBtn = document.createElement('button');
             toggleBtn.type = 'button';
-            toggleBtn.className = 'text-brand-700 hover:text-brand-800 font-semibold whitespace-nowrap focus:outline-none focus:underline';
-            toggleBtn.textContent = 'Read more';
+            toggleBtn.className = 'flex items-center gap-1 mt-1.5 text-brand-700 hover:text-brand-800 hover:underline font-semibold text-sm focus:outline-none focus:underline';
+            toggleBtn.innerHTML = 'Read more <span aria-hidden="true">&rarr;</span>';
             let expanded = false;
             toggleBtn.addEventListener('click', (e) => {
               e.stopPropagation();
               expanded = !expanded;
-              textSpan.textContent = expanded ? fullText + ' ' : shortText + '… ';
-              toggleBtn.textContent = expanded ? 'Show less' : 'Read more';
+              capEl.innerHTML = '';
+              capEl.appendChild(buildCaptionText(expanded ? fullText : shortText));
+              toggleBtn.innerHTML = expanded
+                ? 'Show less <span aria-hidden="true">&larr;</span>'
+                : 'Read more <span aria-hidden="true">&rarr;</span>';
+              capEl.appendChild(toggleBtn);
             });
-            capEl.appendChild(textSpan);
             capEl.appendChild(toggleBtn);
           }
-          wrap.appendChild(capEl);
+          capBox.appendChild(capEl);
         }
 
+        wrap.appendChild(capBox);
         grid.appendChild(wrap);
       });
     }
