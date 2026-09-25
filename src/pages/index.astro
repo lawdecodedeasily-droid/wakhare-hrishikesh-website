@@ -1,0 +1,571 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { LINKS } from '../config';
+
+const title = 'Hrishikesh A. C. Wakhare — Public Policy & Development Practitioner';
+const description = 'Public policy practitioner working on state capacity, district data systems and policy implementation across four Indian states.';
+
+const themes = [
+  { title: 'District data systems', line: 'Building shared records so departments work from one list of beneficiaries.' },
+  { title: 'Coordination across departments', line: 'Getting line departments, agencies and industry to act on one plan.' },
+  { title: 'Skilling, jobs and livelihoods', line: 'Linking training to real employer demand and tracking what happens after placement.' },
+  { title: 'Education and teachers', line: 'Teacher development and learning systems in government schools.' },
+];
+
+const selectedWork = [
+  {
+    tag: 'Dhenkanal, Odisha · 2024–26',
+    title: 'Dakshyata Panji: one district skilling database',
+    problem: 'Fragmented data, duplicate beneficiaries across departments.',
+    outcome: '13 line departments harmonised',
+    href: '/work/dakshyata-panji',
+  },
+  {
+    tag: 'Dhenkanal, Odisha · 2024–26',
+    title: 'PIA Performance Index',
+    problem: 'No routine accountability for training agencies.',
+    outcome: '14 agencies tracked',
+    href: '/work/pia-performance-index',
+  },
+  {
+    tag: 'Dhenkanal, Odisha · 2024–26',
+    title: 'Employment drives and Kaushal Rath',
+    problem: 'Training not matched to demand or reaching remote blocks.',
+    outcome: '1,803 job offers',
+    href: '/work/employment-drives-kaushal-rath',
+  },
+];
+
+const evidence = [
+  { number: '13', label: 'line departments on one district database', context: 'Dhenkanal, Odisha, 2024–26' },
+  { number: '14', label: 'training agencies reviewed monthly on one index', context: 'Dhenkanal, Odisha, 2024–26' },
+  { number: '1,803', label: 'on-the-spot job offers across 96 employment drives', context: 'Dhenkanal, Odisha, 2024–26' },
+  { number: '1,870', label: 'students and 235 teachers reached', context: 'Jhunjhunu, Rajasthan, 2021–23' },
+];
+
+const logoRow = [
+  { name: 'Government of Odisha', type: 'text' },
+  { name: 'Piramal Foundation', type: 'logo', src: '/images/logos/piramal-foundation.png' },
+  { name: 'Joy of Giving Global Foundation', type: 'text' },
+  { name: 'Indian School of Business', type: 'logo', src: '/images/logos/isb.png' },
+  { name: 'Citizens for Public Leadership', type: 'logo', src: '/images/logos/cpl.png' },
+  { name: 'IMPRI', type: 'logo', src: '/images/logos/impri.png' },
+];
+
+const researchItems = [
+  {
+    type: 'Paper',
+    title: 'Recalibrating Influence: India’s International Storytelling and the Challenges of Public Diplomacy in the 21st Century',
+    pub: 'IMPRI Books, 2025',
+    href: '/docs/recalibrating-influence-impri.pdf',
+  },
+  {
+    type: 'Essay',
+    title: 'Perceptions of Power, Narratives of Trust',
+    pub: 'IMPRI Insights, September 2025',
+    href: 'https://www.impriindia.com/insights/indias-public-diplomacy-challenges/',
+  },
+  {
+    type: 'Paper (co-authored)',
+    title: 'Safeguarding Elections in the Age of AI: Countering Deepfakes and Foreign Interference to Protect Democratic Integrity',
+    pub: 'CPL Policy Conclave 2025 — Spotlight Presentation',
+    href: null,
+  },
+];
+---
+
+<BaseLayout title={title} description={description}>
+  <!-- 5.1 Hero -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <p class="label hero-kicker">Public policy · India</p>
+      <h1 class="name-hero">Hrishikesh A. C. Wakhare</h1>
+      <div class="hero-rule" aria-hidden="true"></div>
+      <p class="hero-positioning">Public Policy &amp; Development Practitioner</p>
+      <p class="hero-focus">State capacity · Public systems · Policy implementation</p>
+      <p class="hero-intro">Five years inside and alongside public systems in Maharashtra, Rajasthan, Bihar and Odisha — building district data, monitoring and coordination mechanisms, and moving toward policy research and institutional design.</p>
+      <div class="hero-actions">
+        <a href="/work" class="btn btn-primary">View my work</a>
+        <a href="/contact" class="btn btn-secondary">Get in touch</a>
+      </div>
+      <p class="hero-location">Based in New Delhi</p>
+    </div>
+  </section>
+
+  <!-- 5.2 What I work on -->
+  <section class="section">
+    <div class="container">
+      <h2 class="visually-hidden">What I work on</h2>
+      <div class="themes-grid">
+        {themes.map((theme) => (
+          <div class="theme">
+            <h3>{theme.title}</h3>
+            <p>{theme.line}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 5.3 Selected work -->
+  <section class="section section-alt">
+    <div class="container">
+      <h2>Selected work</h2>
+      <div class="work-grid">
+        {selectedWork.map((item) => (
+          <a href={item.href} class="card work-card">
+            <span class="tag">{item.tag}</span>
+            <h3>{item.title}</h3>
+            <p class="work-problem">{item.problem}</p>
+            <p class="work-outcome">{item.outcome}</p>
+            <span class="read-link">Read case study &rarr;</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 5.4 Selected evidence -->
+  <section class="section">
+    <div class="container">
+      <h2>Selected evidence</h2>
+      <div class="evidence-grid">
+        {evidence.map((item) => (
+          <div class="evidence-tile">
+            <div class="number">{item.number}</div>
+            <p class="evidence-label">{item.label}</p>
+            <p class="evidence-context text-small">{item.context}</p>
+          </div>
+        ))}
+      </div>
+      <a href="/evidence" class="see-all-link">See all evidence &rarr;</a>
+
+      <div class="logo-row">
+        <p class="label logo-row-label">Worked with and learned at</p>
+        <div class="logo-row-items">
+          {logoRow.map((org) =>
+            org.type === 'logo' ? (
+              <img src={org.src} alt={org.name} class="logo-item" loading="lazy" />
+            ) : (
+              <span class="logo-item logo-item-text">{org.name}</span>
+            )
+          )}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5.5 Research & writing -->
+  <section class="section section-alt">
+    <div class="container">
+      <h2>Research &amp; writing</h2>
+      <ul class="research-list">
+        {researchItems.map((item) => (
+          <li class="research-item">
+            <span class="label research-type">{item.type}</span>
+            <h3 class="research-title">
+              {item.href ? <a href={item.href} target={item.href.startsWith('http') || item.href.startsWith('/docs') ? '_blank' : undefined} rel={item.href.startsWith('http') || item.href.startsWith('/docs') ? 'noopener' : undefined}>{item.title}</a> : item.title}
+            </h3>
+            <p class="research-pub text-small">{item.pub}</p>
+          </li>
+        ))}
+      </ul>
+      <p class="policy-debrief-line">
+        <strong>Policy Debrief</strong> — short explainers on government schemes, governance and foreign policy in Hindi, Marathi, English and Odia.
+        <a href={LINKS.instagram} target="_blank" rel="noopener">Follow on Instagram &rarr;</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- 5.6 About teaser -->
+  <section class="section">
+    <div class="container about-teaser-grid">
+      <div class="about-teaser-portrait">
+        <img src="/images/about-portrait.jpg" alt="Hrishikesh A. C. Wakhare" loading="lazy" />
+      </div>
+      <div class="about-teaser-content">
+        <p>I started in government schools in Rajasthan and spent the last two years in district administration in Odisha, working on skilling data, agency accountability and employment drives. That work left me with questions about how public systems learn and coordinate. My research now follows those questions.</p>
+        <blockquote class="endorsement">
+          <p>&ldquo;What stands out about Hrishikesh is the way he holds both ends of the policy spectrum — the lived, district-level realities of governance and the higher-order analytical conversations&hellip;&rdquo;</p>
+          <footer>
+            <span class="endorsement-name">Sunidhi Chettri</span>
+            <span class="text-small endorsement-relationship">Citizens for Public Leadership cohort</span>
+            &mdash;
+            <a href={LINKS.linkedinRecommendations} target="_blank" rel="noopener">Read on LinkedIn</a>
+          </footer>
+        </blockquote>
+        <a href="/about" class="read-link">Read more about me &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5.7 Contact strip -->
+  <section class="section contact-strip">
+    <div class="container">
+      <h2>Working on public systems, policy research or state capacity? I&rsquo;d like to hear from you.</h2>
+      <div class="contact-actions">
+        <a href={`mailto:${LINKS.email}`} class="btn btn-primary">{LINKS.email}</a>
+        <a href={LINKS.linkedin} target="_blank" rel="noopener" class="btn btn-secondary">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero {
+    background-color: var(--paper);
+    padding-top: 96px;
+    padding-bottom: var(--section-pad-mobile);
+    min-height: calc(100vh - var(--header-height-mobile));
+    display: flex;
+    align-items: center;
+  }
+
+  @media (min-width: 900px) {
+    .hero {
+      padding-top: 160px;
+      min-height: 85vh;
+    }
+  }
+
+  .hero-inner {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-kicker {
+    color: var(--ink-2);
+    margin-bottom: var(--space-4);
+  }
+
+  .hero-rule {
+    width: 64px;
+    height: 2px;
+    background-color: var(--ochre);
+    margin-block: var(--space-5);
+  }
+
+  .hero-positioning {
+    font-family: var(--font-sans);
+    font-weight: 500;
+    font-size: 18px;
+    margin: 0 0 var(--space-2) 0;
+  }
+
+  @media (min-width: 900px) {
+    .hero-positioning {
+      font-size: 20px;
+    }
+  }
+
+  .hero-focus {
+    font-family: var(--font-sans);
+    font-size: 16px;
+    color: var(--ink-2);
+    margin: 0 0 var(--space-6) 0;
+  }
+
+  .hero-intro {
+    max-width: 600px;
+    color: var(--ink-2);
+    margin-bottom: var(--space-7);
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    width: 100%;
+    max-width: 320px;
+    margin-bottom: var(--space-6);
+  }
+
+  @media (min-width: 640px) {
+    .hero-actions {
+      flex-direction: row;
+      max-width: none;
+      width: auto;
+    }
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  @media (min-width: 640px) {
+    .hero-actions .btn {
+      width: auto;
+    }
+  }
+
+  .hero-location {
+    font-family: var(--font-sans);
+    font-size: 14px;
+    color: var(--ink-2);
+    margin: 0;
+  }
+
+  .section-alt {
+    background-color: var(--surface);
+  }
+
+  .section h2 {
+    margin-bottom: var(--space-7);
+  }
+
+  .themes-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-5);
+  }
+
+  @media (min-width: 700px) {
+    .themes-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-6);
+    }
+  }
+
+  @media (min-width: 1000px) {
+    .themes-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  .theme h3 {
+    margin-bottom: var(--space-2);
+  }
+
+  .theme p {
+    color: var(--ink-2);
+    max-width: none;
+  }
+
+  .work-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-5);
+  }
+
+  @media (min-width: 900px) {
+    .work-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .work-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  .work-card h3 {
+    margin: 0;
+  }
+
+  .work-problem,
+  .work-outcome {
+    max-width: none;
+    margin: 0;
+  }
+
+  .work-problem {
+    color: var(--ink-2);
+  }
+
+  .work-outcome {
+    font-weight: 600;
+    color: var(--ink);
+  }
+
+  .read-link {
+    color: var(--accent);
+    font-weight: 500;
+    font-size: 15px;
+  }
+
+  .evidence-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-6);
+    margin-bottom: var(--space-6);
+  }
+
+  @media (min-width: 900px) {
+    .evidence-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  .evidence-tile .number {
+    color: var(--ink);
+    border-bottom: 2px solid var(--ochre);
+    padding-bottom: var(--space-2);
+    display: inline-block;
+    margin-bottom: var(--space-3);
+  }
+
+  .evidence-label {
+    max-width: none;
+    margin: 0 0 var(--space-1) 0;
+  }
+
+  .evidence-context {
+    color: var(--ink-2);
+    margin: 0;
+  }
+
+  .see-all-link {
+    display: inline-block;
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: var(--space-9);
+  }
+
+  .logo-row-label {
+    color: var(--ink-2);
+    margin-bottom: var(--space-5);
+  }
+
+  .logo-row-items {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-6);
+  }
+
+  .logo-item {
+    height: 28px;
+    width: auto;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: filter 150ms ease, opacity 150ms ease;
+  }
+
+  .logo-item:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+  }
+
+  .logo-item-text {
+    height: auto;
+    font-family: var(--font-sans);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--ink-2);
+  }
+
+  .research-list {
+    list-style: none;
+    margin: 0 0 var(--space-7) 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+  }
+
+  .research-type {
+    color: var(--accent);
+    display: inline-block;
+    margin-bottom: var(--space-2);
+  }
+
+  .research-title {
+    margin-bottom: var(--space-1);
+  }
+
+  .research-title a {
+    color: var(--ink);
+  }
+
+  .research-pub {
+    color: var(--ink-2);
+    margin: 0;
+  }
+
+  .policy-debrief-line {
+    max-width: none;
+    color: var(--ink-2);
+  }
+
+  .policy-debrief-line strong {
+    color: var(--ink);
+  }
+
+  .about-teaser-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-7);
+    align-items: center;
+  }
+
+  @media (min-width: 800px) {
+    .about-teaser-grid {
+      grid-template-columns: 280px 1fr;
+    }
+  }
+
+  .about-teaser-portrait img {
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: 8px;
+    width: 100%;
+  }
+
+  .endorsement {
+    margin: var(--space-6) 0;
+    padding-left: var(--space-5);
+    border-left: 2px solid var(--rule);
+  }
+
+  .endorsement p {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 19px;
+    color: var(--ink);
+    max-width: none;
+  }
+
+  .endorsement footer {
+    font-size: 14px;
+    color: var(--ink-2);
+    margin-top: var(--space-3);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    align-items: center;
+  }
+
+  .endorsement-name {
+    font-weight: 600;
+    color: var(--ink);
+  }
+
+  .contact-strip {
+    background-color: var(--accent-soft);
+    text-align: center;
+  }
+
+  .contact-strip h2 {
+    max-width: 680px;
+    margin-inline: auto;
+    margin-bottom: var(--space-7);
+  }
+
+  .contact-actions {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    align-items: center;
+  }
+
+  @media (min-width: 640px) {
+    .contact-actions {
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+</style>
