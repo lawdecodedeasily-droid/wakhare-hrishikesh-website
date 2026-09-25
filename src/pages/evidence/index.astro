@@ -1,0 +1,161 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { LINKS } from '../../config';
+
+const title = 'Evidence — Hrishikesh A. C. Wakhare';
+const description = 'Every impact number from five years in public systems, by state and year.';
+
+const blocks = [
+  {
+    heading: 'Dhenkanal, Odisha · 2024–26',
+    org: 'Government of Odisha, Skill Development & Technical Education',
+    tiles: [
+      { number: '13', label: 'departments’ records of unemployed youth combined in one district database (Dakshyata Panji), ending their invisibility to planners', href: '/work/dakshyata-panji' },
+      { number: '14', label: 'training agencies reviewed monthly on the PIA Performance Index', href: '/work/pia-performance-index' },
+      { number: '96', label: 'district and block employment drives', href: '/work/employment-drives-kaushal-rath' },
+      { number: '2,879', label: 'candidates mobilised for those drives', href: '/work/employment-drives-kaushal-rath' },
+      { number: '1,803', label: 'on-the-spot job offers', href: '/work/employment-drives-kaushal-rath' },
+      { number: '6,578', label: 'students reached through the 780 km Kaushal Rath outreach', href: '/work/employment-drives-kaushal-rath' },
+      { number: '1,120', label: 'marginalised women trained in technical trades', href: null },
+      { number: '785', label: 'of them placed in certified wage jobs (70%)', href: null },
+      { number: '40', label: 'youth-led enterprises supported through Nano Unicorn', href: null },
+      { number: '450', label: 'students in the Industry 4.0 programme with IIT Delhi', href: null },
+      { number: '150', label: 'youth in advanced technology skilling', href: null },
+      { number: '17 + 11', label: 'government ITIs and industry partners in the Dual System of Training', href: null },
+      { number: '25', label: 'district priority projects, coordinated support with the district administration', href: null },
+    ],
+  },
+  {
+    heading: 'Bhagalpur, Bihar · 2024',
+    org: 'Jan Suraaj Young Leader, Joy of Giving Global Foundation',
+    tiles: [
+      { number: '4,000+', label: 'people reached through public health outreach camps, Kahalgaon', href: null },
+    ],
+  },
+  {
+    heading: 'Golegaon, Pune, Maharashtra',
+    org: null,
+    tiles: [
+      { number: '600+', label: 'farmers supported through a rural dairy modernisation initiative', href: null },
+      { number: '6,000 L', label: 'daily milk collection', href: null },
+    ],
+  },
+  {
+    heading: 'Jhunjhunu, Rajasthan · 2021–23',
+    org: 'Gandhi Fellowship, Piramal Foundation',
+    tiles: [
+      { number: '1,870', label: 'students in 10 government schools', href: '/work/teacher-learning-labs' },
+      { number: '235', label: 'teachers supported', href: '/work/teacher-learning-labs' },
+      { number: '450', label: 'rural educators reached through Teacher Learning Labs', href: '/work/teacher-learning-labs' },
+    ],
+  },
+];
+---
+
+<BaseLayout title={title} description={description}>
+  <section class="section page-header">
+    <div class="container">
+      <h1>Evidence</h1>
+      <p class="page-intro">What five years of work in public systems added up to, in numbers. Each figure links to the work behind it.</p>
+    </div>
+  </section>
+
+  {blocks.map((block, i) => (
+    <section class:list={['section', 'evidence-block', { 'section-alt': i % 2 === 1 }]}>
+      <div class="container">
+        <div class="block-heading">
+          <h2>{block.heading}</h2>
+          {block.org && <p class="block-org text-small">{block.org}</p>}
+        </div>
+        <div class="tiles-grid">
+          {block.tiles.map((tile) => (
+            tile.href ? (
+              <a href={tile.href} class="evidence-tile evidence-tile-link">
+                <div class="number">{tile.number}</div>
+                <p class="evidence-label">{tile.label}</p>
+                <span class="read-link">Read more &rarr;</span>
+              </a>
+            ) : (
+              <div class="evidence-tile">
+                <div class="number">{tile.number}</div>
+                <p class="evidence-label">{tile.label}</p>
+              </div>
+            )
+          ))}
+        </div>
+      </div>
+    </section>
+  ))}
+
+  <section class="section dakshyata-note">
+    <div class="container">
+      <p class="text-small">Dakshyata Panji is still in active use. <a href={LINKS.dakshyataPanji} target="_blank" rel="noopener">dakshyatapanji.com &rarr;</a></p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-header h1 {
+    margin-bottom: var(--space-4);
+  }
+
+  .page-intro {
+    color: var(--ink-2);
+  }
+
+  .block-heading {
+    margin-bottom: var(--space-7);
+  }
+
+  .block-org {
+    color: var(--ink-2);
+    margin-top: var(--space-2);
+  }
+
+  .tiles-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-6);
+  }
+
+  @media (min-width: 700px) {
+    .tiles-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .evidence-tile .number {
+    color: var(--ink);
+    border-bottom: 2px solid var(--ochre);
+    padding-bottom: var(--space-2);
+    display: inline-block;
+    margin-bottom: var(--space-3);
+  }
+
+  .evidence-label {
+    max-width: none;
+    margin: 0 0 var(--space-2) 0;
+    color: var(--ink-2);
+  }
+
+  .evidence-tile-link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .evidence-tile-link .read-link {
+    color: var(--accent);
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .dakshyata-note {
+    padding-block: var(--space-8);
+  }
+
+  .dakshyata-note p {
+    color: var(--ink-2);
+    max-width: none;
+  }
+</style>

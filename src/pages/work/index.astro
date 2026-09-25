@@ -1,0 +1,115 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = 'Work — Hrishikesh A. C. Wakhare';
+const description = 'Case studies from district governance in Odisha and education reform in Rajasthan: data systems, agency monitoring, employment drives.';
+
+const caseStudies = [
+  {
+    tag: 'Dhenkanal, Odisha · 2024–26',
+    title: 'Dakshyata Panji: one district skilling database',
+    problem: 'Fragmented data, duplicate beneficiaries across departments.',
+    outcome: '13 line departments harmonised',
+    href: '/work/dakshyata-panji',
+  },
+  {
+    tag: 'Dhenkanal, Odisha · 2024–26',
+    title: 'PIA Performance Index',
+    problem: 'No routine accountability for training agencies.',
+    outcome: '14 agencies tracked; placement and post-placement tracking',
+    href: '/work/pia-performance-index',
+  },
+  {
+    tag: 'Dhenkanal, Odisha · 2024–26',
+    title: 'Employment drives and Kaushal Rath',
+    problem: 'Training not matched to demand or reaching remote blocks.',
+    outcome: '96 drives, 2,879 candidates, 1,803 offers; 780 km, 6,578 students',
+    href: '/work/employment-drives-kaushal-rath',
+  },
+  {
+    tag: 'Jhunjhunu, Rajasthan · 2021–23',
+    title: 'Teacher Learning Labs, Jhunjhunu',
+    problem: 'Teacher development in government schools.',
+    outcome: '1,870 students, 235 teachers; 450 educators via Teacher Learning Lab',
+    href: '/work/teacher-learning-labs',
+  },
+];
+---
+
+<BaseLayout title={title} description={description}>
+  <section class="section page-header">
+    <div class="container">
+      <h1>Work</h1>
+      <p class="page-intro">Four pieces of work that show how I approach a governance problem: find where the system breaks, build a simple mechanism, and measure what changes.</p>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <div class="work-grid">
+        {caseStudies.map((item) => (
+          <a href={item.href} class="card work-card">
+            <span class="tag">{item.tag}</span>
+            <h3>{item.title}</h3>
+            <p class="work-problem">{item.problem}</p>
+            <p class="work-outcome">{item.outcome}</p>
+            <span class="read-link">Read case study &rarr;</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-header h1 {
+    margin-bottom: var(--space-4);
+  }
+
+  .page-intro {
+    color: var(--ink-2);
+  }
+
+  .work-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-5);
+  }
+
+  @media (min-width: 700px) {
+    .work-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .work-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  .work-card h3 {
+    margin: 0;
+  }
+
+  .work-problem,
+  .work-outcome {
+    max-width: none;
+    margin: 0;
+  }
+
+  .work-problem {
+    color: var(--ink-2);
+  }
+
+  .work-outcome {
+    font-weight: 600;
+    color: var(--ink);
+  }
+
+  .read-link {
+    color: var(--accent);
+    font-weight: 500;
+    font-size: 15px;
+  }
+</style>

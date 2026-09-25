@@ -1,0 +1,81 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { LINKS } from '../../config';
+
+const title = 'Contact — Hrishikesh A. C. Wakhare';
+const description = 'Get in touch about public policy roles, research and collaborations.';
+---
+
+<BaseLayout title={title} description={description}>
+  <section class="section contact-page">
+    <div class="container contact-inner">
+      <h1>Get in touch</h1>
+      <p class="contact-intro">I&rsquo;m open to roles and collaborations in public policy, state capacity and policy research.</p>
+
+      <a href={`mailto:${LINKS.email}`} class="email-primary">{LINKS.email}</a>
+
+      <div class="secondary-row">
+        <a href={LINKS.linkedin} target="_blank" rel="noopener">LinkedIn</a>
+        <span class="sep" aria-hidden="true">·</span>
+        <a href={LINKS.instagram} target="_blank" rel="noopener">Policy Debrief</a>
+        <span class="sep" aria-hidden="true">·</span>
+        <a href={LINKS.x} target="_blank" rel="noopener">X</a>
+      </div>
+
+      <p class="location-line text-small">Based in New Delhi</p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .contact-page {
+    text-align: center;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+  }
+
+  .contact-inner {
+    width: 100%;
+  }
+
+  .contact-page h1 {
+    margin-bottom: var(--space-4);
+  }
+
+  .contact-intro {
+    color: var(--ink-2);
+    margin-inline: auto;
+    margin-bottom: var(--space-7);
+  }
+
+  .email-primary {
+    display: inline-block;
+    font-family: var(--font-serif);
+    font-size: 28px;
+    font-weight: 500;
+    color: var(--accent);
+    margin-bottom: var(--space-6);
+  }
+
+  @media (min-width: 700px) {
+    .email-primary {
+      font-size: 36px;
+    }
+  }
+
+  .secondary-row {
+    font-size: 15px;
+    margin-bottom: var(--space-7);
+  }
+
+  .secondary-row .sep {
+    color: var(--ink-2);
+    margin-inline: var(--space-2);
+  }
+
+  .location-line {
+    color: var(--ink-2);
+    margin: 0;
+  }
+</style>

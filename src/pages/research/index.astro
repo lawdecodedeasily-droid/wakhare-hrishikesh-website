@@ -1,0 +1,137 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { LINKS } from '../../config';
+
+const title = 'Research & Writing — Hrishikesh A. C. Wakhare';
+const description = 'Papers and essays on education and DPI, governance and implementation, and India’s public diplomacy.';
+
+const researchItems = [
+  {
+    type: 'Paper — Peer-reviewed',
+    title: 'Recalibrating Influence: India’s International Storytelling and the Challenges of Public Diplomacy in the 21st Century',
+    pub: 'IMPRI Books, 2025',
+    href: '/docs/recalibrating-influence-impri.pdf',
+  },
+  {
+    type: 'Essay',
+    title: 'Perceptions of Power, Narratives of Trust',
+    pub: 'IMPRI Insights, September 2025',
+    href: 'https://www.impriindia.com/insights/indias-public-diplomacy-challenges/',
+  },
+  {
+    type: 'Paper (co-authored)',
+    title: 'Safeguarding Elections in the Age of AI: Countering Deepfakes and Foreign Interference to Protect Democratic Integrity',
+    pub: 'CPL Policy Conclave 2025 — Spotlight Presentation',
+    href: null,
+  },
+];
+
+const convergenceTable = {
+  name: 'The Convergence Table',
+  description: 'A closed-door working session for governance practitioners to bring a real structural problem and subject it to peer critique.',
+  status: 'In development: operating procedure being drafted, first sessions to follow.',
+};
+---
+
+<BaseLayout title={title} description={description}>
+  <section class="section page-header">
+    <div class="container">
+      <h1>Research &amp; Writing</h1>
+      <p class="page-intro">My research grows out of questions I met in implementation: why schemes reach some people and not others, how systems learn from their own data, and how India&rsquo;s domestic governance shapes its standing abroad.</p>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <ul class="research-list">
+        {researchItems.map((item) => (
+          <li class="research-item">
+            <span class="label research-type">{item.type}</span>
+            <h3 class="research-title">
+              {item.href ? <a href={item.href} target={item.href.startsWith('http') || item.href.startsWith('/docs') ? '_blank' : undefined} rel={item.href.startsWith('http') || item.href.startsWith('/docs') ? 'noopener' : undefined}>{item.title}</a> : item.title}
+            </h3>
+            <p class="research-pub text-small">{item.pub}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>Policy Debrief</h2>
+      <p class="policy-debrief-line">Short explainers on government schemes, governance and foreign policy in Hindi, Marathi, English and Odia.</p>
+      <a href={LINKS.instagram} target="_blank" rel="noopener" class="btn btn-secondary">Follow on Instagram</a>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <h2>Initiatives</h2>
+      <a href="/convergence-table" class="card ct-card">
+        <h3>{convergenceTable.name}</h3>
+        <p class="ct-description">{convergenceTable.description}</p>
+        <p class="ct-status text-small">{convergenceTable.status}</p>
+      </a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-header h1 {
+    margin-bottom: var(--space-4);
+  }
+
+  .page-intro {
+    color: var(--ink-2);
+  }
+
+  .research-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+  }
+
+  .research-type {
+    color: var(--accent);
+    display: inline-block;
+    margin-bottom: var(--space-2);
+  }
+
+  .research-title {
+    margin-bottom: var(--space-1);
+  }
+
+  .research-title a {
+    color: var(--ink);
+  }
+
+  .research-pub {
+    color: var(--ink-2);
+    margin: 0;
+  }
+
+  .policy-debrief-line {
+    color: var(--ink-2);
+    margin-bottom: var(--space-5);
+  }
+
+  .ct-card {
+    max-width: 560px;
+  }
+
+  .ct-description {
+    color: var(--ink-2);
+    max-width: none;
+    margin-bottom: var(--space-3);
+  }
+
+  .ct-status {
+    color: var(--ink-2);
+    max-width: none;
+    margin: 0;
+  }
+</style>

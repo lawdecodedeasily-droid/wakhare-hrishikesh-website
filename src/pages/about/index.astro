@@ -1,0 +1,257 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { LINKS } from '../../config';
+
+const title = 'About — Hrishikesh A. C. Wakhare';
+const description = 'From field work in Rajasthan, Bihar and Odisha to policy research on state capacity.';
+
+const narrative = [
+  { heading: 'Where I began', text: 'I grew up in Shirur, in Pune district, and studied History at Savitribai Phule Pune University.' },
+  { heading: 'What the field taught me', text: 'In Jhunjhunu, Rajasthan, I spent two years in government schools with teachers, head teachers and block officials. I learned that reform lives or dies in routines, not in circulars.' },
+  { heading: 'What I saw inside public systems', text: 'In Bihar and then in Dhenkanal, Odisha, I saw the same pattern at a larger scale. Departments with overlapping goals worked from separate lists, and nobody owned the whole picture.' },
+  { heading: 'Why that pushed me toward research', text: 'The questions I kept meeting — why schemes miss people, how systems learn from their own data — needed more than field fixes. That led to research on NEP 2020, digital public infrastructure and India’s public diplomacy.' },
+  { heading: 'What I want to contribute next', text: 'I want to work on state capacity and policy design at national level, where field evidence can shape how programmes are built.' },
+];
+
+const timeline = [
+  { years: 'Jul 2021 – May 2023', place: 'Jhunjhunu, Rajasthan', org: 'Gandhi Fellow, Piramal Foundation', logo: '/images/logos/piramal-foundation.png', line: 'Teacher Learning Labs, peer tutoring and school systems in 10 government schools; Global Schools Advocate, UN SDSN Global Schools Program.' },
+  { years: 'Jun 2023 – Jan 2024', place: 'Pune, Maharashtra', org: 'Independent policy research', logo: null, line: 'NEP 2020 implementation and digital public infrastructure in education.' },
+  { years: 'Feb 2024 – Jul 2024', place: 'Bhagalpur, Bihar', org: 'Jan Suraaj Young Leader, Joy of Giving Global Foundation', logo: null, line: 'Grassroots civic engagement; ran public health outreach camps in Kahalgaon.' },
+  { years: 'Mar – Jun 2025', place: 'Hyderabad', org: 'Indian School of Business: certificate, Understanding Indian Public Policy', logo: '/images/logos/isb.png', line: 'Public policy training.' },
+  { years: 'Mar 2025 – Feb 2026, remote', place: null, org: 'Citizens for Public Leadership fellowship', logo: '/images/logos/cpl.png', line: 'Co-authored paper on AI and elections; Spotlight Presentation, CPL Policy Conclave 2025.' },
+  { years: 'Jul – Oct 2025, remote', place: null, org: 'IMPRI diplomacy fellowship', logo: '/images/logos/impri.png', line: 'Peer-reviewed research on India’s public diplomacy.' },
+  { years: 'Jul 2024 – Jul 2026', place: 'Dhenkanal, Odisha', org: 'Government of Odisha, Department of Skill Development & Technical Education', logo: null, line: 'District skilling database, agency monitoring, employment drives.' },
+];
+
+const languages = [
+  { name: 'English', level: 'fluent' },
+  { name: 'Hindi', level: 'native' },
+  { name: 'Marathi', level: 'native' },
+  { name: 'Odia', level: 'beginner' },
+  { name: 'Spanish', level: 'beginner' },
+];
+---
+
+<BaseLayout title={title} description={description}>
+  <section class="section page-header">
+    <div class="container about-header-grid">
+      <div class="about-portrait">
+        <img src="/images/about-portrait.jpg" alt="Hrishikesh A. C. Wakhare" loading="lazy" />
+      </div>
+      <div class="about-narrative">
+        <h1>About</h1>
+        {narrative.map((part) => (
+          <div class="narrative-part">
+            <h3>{part.heading}</h3>
+            <p>{part.text}</p>
+          </div>
+        ))}
+
+        <blockquote class="endorsement">
+          <p>&ldquo;What stands out about Hrishikesh is the way he holds both ends of the policy spectrum — the lived, district-level realities of governance and the higher-order analytical conversations&hellip;&rdquo;</p>
+          <footer>
+            <span class="endorsement-name">Sunidhi Chettri</span>
+            <span class="text-small">Citizens for Public Leadership cohort</span>
+            &mdash;
+            <a href={LINKS.linkedinRecommendations} target="_blank" rel="noopener">Read on LinkedIn</a>
+          </footer>
+        </blockquote>
+
+        <a href="/gallery" class="read-link">See the gallery &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <h2>Career journey</h2>
+      <ol class="timeline">
+        {timeline.map((item) => (
+          <li class="timeline-item">
+            <div class="timeline-meta">
+              <p class="timeline-years label">{item.years}</p>
+              {item.place && <p class="timeline-place text-small">{item.place}</p>}
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-org-row">
+                {item.logo && <img src={item.logo} alt="" class="timeline-logo" loading="lazy" />}
+                <h3 class="timeline-org">{item.org}</h3>
+              </div>
+              <p class="timeline-line">{item.line}</p>
+            </div>
+          </li>
+        ))}
+      </ol>
+      <p class="next-line label">Next: New Delhi</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>Languages</h2>
+      <ul class="languages-list">
+        {languages.map((lang) => (
+          <li><strong>{lang.name}</strong> <span class="text-small">({lang.level})</span></li>
+        ))}
+      </ul>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .about-header-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-7);
+  }
+
+  @media (min-width: 800px) {
+    .about-header-grid {
+      grid-template-columns: 240px 1fr;
+      align-items: start;
+    }
+  }
+
+  .about-portrait img {
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: 8px;
+    width: 100%;
+  }
+
+  .about-narrative h1 {
+    margin-bottom: var(--space-6);
+  }
+
+  .narrative-part {
+    margin-bottom: var(--space-5);
+  }
+
+  .narrative-part h3 {
+    margin-bottom: var(--space-1);
+    color: var(--accent);
+  }
+
+  .narrative-part p {
+    color: var(--ink-2);
+    max-width: none;
+  }
+
+  .endorsement {
+    margin: var(--space-6) 0;
+    padding-left: var(--space-5);
+    border-left: 2px solid var(--rule);
+  }
+
+  .endorsement p {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 19px;
+    color: var(--ink);
+    max-width: none;
+  }
+
+  .endorsement footer {
+    font-size: 14px;
+    color: var(--ink-2);
+    margin-top: var(--space-3);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    align-items: center;
+  }
+
+  .endorsement-name {
+    font-weight: 600;
+    color: var(--ink);
+  }
+
+  .read-link {
+    color: var(--accent);
+    font-weight: 500;
+    display: inline-block;
+    margin-top: var(--space-4);
+  }
+
+  .timeline {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-left: 2px solid var(--rule);
+  }
+
+  .timeline-item {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-2);
+    padding: 0 0 var(--space-7) var(--space-6);
+    position: relative;
+  }
+
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -6px;
+    top: 4px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--ochre);
+  }
+
+  @media (min-width: 700px) {
+    .timeline-item {
+      grid-template-columns: 180px 1fr;
+    }
+  }
+
+  .timeline-years {
+    color: var(--accent);
+    margin: 0 0 var(--space-1) 0;
+  }
+
+  .timeline-place {
+    color: var(--ink-2);
+    margin: 0;
+  }
+
+  .timeline-org-row {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    margin-bottom: var(--space-2);
+  }
+
+  .timeline-logo {
+    height: 24px;
+    width: auto;
+  }
+
+  .timeline-org {
+    margin: 0;
+  }
+
+  .timeline-line {
+    color: var(--ink-2);
+    max-width: none;
+    margin: 0;
+  }
+
+  .next-line {
+    color: var(--ink-2);
+    margin-left: var(--space-6);
+  }
+
+  .languages-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-6);
+  }
+
+  .languages-list span {
+    color: var(--ink-2);
+  }
+</style>
