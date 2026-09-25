@@ -70,9 +70,8 @@
         <nav class="hidden lg:flex items-center space-x-7 text-sm font-medium text-neutral-600">
           <a href="about.html" class="hover:text-brand-700 transition">About</a>
           <a href="role-initiatives.html" class="hover:text-brand-700 transition">Role & Initiatives</a>
-          <a href="convergence-table.html" class="hover:text-brand-700 transition text-brand-700 font-semibold">&bull; Convergence Table</a>
-          <a href="index.html#endorsements" class="hover:text-brand-700 transition">Endorsements</a>
-          <a href="contact.html" class="hover:text-brand-700 transition">Contact</a>
+          <a href="convergence-table.html" class="hover:text-brand-700 transition">Convergence Table</a>
+                    <a href="contact.html" class="hover:text-brand-700 transition">Contact</a>
         </nav>
         <button onclick="toggleMenu(true)" class="flex items-center justify-center w-11 h-11 rounded-full bg-neutral-100 hover:bg-neutral-900 hover:text-white transition">
           <svg class="w-6 h-6 stroke-[2]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"></path></svg>
@@ -95,9 +94,8 @@
         <div><a href="role-initiatives.html" class="menu-link-item text-2xl sm:text-4xl md:text-5xl font-semibold tracking-tight uppercase hover:text-brand-500">Current Role & Initiatives</a></div>
         <div><a href="career.html" class="menu-link-item text-2xl sm:text-4xl md:text-5xl font-semibold tracking-tight uppercase hover:text-brand-500">Career</a></div>
         <div><a href="writing.html" class="menu-link-item text-2xl sm:text-4xl md:text-5xl font-semibold tracking-tight uppercase hover:text-brand-500">Writing & Publications</a></div>
-        <div><a href="convergence-table.html" class="menu-link-item text-2xl sm:text-4xl md:text-5xl font-semibold tracking-tight uppercase text-blue-400 hover:text-white">The Convergence Table</a></div>
+        <div><a href="convergence-table.html" class="menu-link-item text-2xl sm:text-4xl md:text-5xl font-semibold tracking-tight uppercase hover:text-brand-500">The Convergence Table</a></div>
         <div><a href="gallery.html" class="menu-link-item text-2xl sm:text-4xl md:text-5xl font-semibold tracking-tight uppercase hover:text-brand-500">Gallery</a></div>
-        <div><a href="index.html#endorsements" class="menu-link-item text-2xl sm:text-4xl md:text-5xl font-semibold tracking-tight uppercase hover:text-brand-500">Endorsements</a></div>
         <div><a href="contact.html" class="menu-link-item text-2xl sm:text-4xl md:text-5xl font-semibold tracking-tight uppercase hover:text-brand-500">Contact</a></div>
       </nav>
     </div>
@@ -221,6 +219,16 @@
       'odisha-skill-development': 'Skill Development & Technical Education, Odisha',
     };
 
+    const CAPTION_CHAR_BUDGET = 150;
+
+    function truncateAtWord(text, limit) {
+      if (text.length <= limit) return text;
+      let cut = text.slice(0, limit);
+      const lastSpace = cut.lastIndexOf(' ');
+      if (lastSpace > 0) cut = cut.slice(0, lastSpace);
+      return cut.replace(/[,;:\-–—]+$/, '').trim();
+    }
+
     function renderGallery(photos) {
       const grid = document.getElementById('gallery-grid');
       grid.innerHTML = '';
@@ -233,7 +241,7 @@
           : `${CATEGORY_LABELS[p.category] || p.category} photo ${n}`;
 
         const wrap = document.createElement('div');
-        wrap.className = 'mb-4 break-inside-avoid';
+        wrap.className = 'mb-5 break-inside-avoid group';
 
         const img = document.createElement('img');
         img.src = p.file;
@@ -245,11 +253,33 @@
         img.addEventListener('click', openLightbox);
         wrap.appendChild(img);
 
-        if (p.caption && p.caption.trim()) {
-          const cap = document.createElement('p');
-          cap.className = 'text-xs text-gray-500 mt-1.5 leading-snug line-clamp-2';
-          cap.textContent = p.caption;
-          wrap.appendChild(cap);
+        const fullText = (p.caption || '').trim();
+        if (fullText) {
+          const capEl = document.createElement('p');
+          capEl.className = 'mt-2.5 text-sm text-gray-600 leading-relaxed group-hover:text-gray-900 transition-colors duration-200';
+
+          const needsTruncation = fullText.length > CAPTION_CHAR_BUDGET;
+          if (!needsTruncation) {
+            capEl.textContent = fullText;
+          } else {
+            const shortText = truncateAtWord(fullText, CAPTION_CHAR_BUDGET);
+            const textSpan = document.createElement('span');
+            textSpan.textContent = shortText + '… ';
+            const toggleBtn = document.createElement('button');
+            toggleBtn.type = 'button';
+            toggleBtn.className = 'text-brand-700 hover:text-brand-800 font-semibold whitespace-nowrap focus:outline-none focus:underline';
+            toggleBtn.textContent = 'Read more';
+            let expanded = false;
+            toggleBtn.addEventListener('click', (e) => {
+              e.stopPropagation();
+              expanded = !expanded;
+              textSpan.textContent = expanded ? fullText + ' ' : shortText + '… ';
+              toggleBtn.textContent = expanded ? 'Show less' : 'Read more';
+            });
+            capEl.appendChild(textSpan);
+            capEl.appendChild(toggleBtn);
+          }
+          wrap.appendChild(capEl);
         }
 
         grid.appendChild(wrap);
