@@ -1,0 +1,13 @@
+{
+  "framework": "astro",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "cleanUrls": true,
+  "redirects": [
+    { "source": "/index.html", "destination": "/", "permanent": true },
+    { "source": "/role-initiatives.html", "destination": "/work", "permanent": true },
+    { "source": "/career.html", "destination": "/about", "permanent": true },
+    { "source": "/writing.html", "destination": "/research", "permanent": true },
+    { "source": "/endorsements.html", "destination": "/about", "permanent": true }
+  ]
+}

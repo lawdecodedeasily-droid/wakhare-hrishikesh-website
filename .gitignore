@@ -9,3 +9,12 @@ Testimonial_s for Website(Hrishikesh)/
 REDESIGN-PROMPT.md
 REDESIGN-BRIEF.md
 OPEN-QUESTIONS.md
+
+# Astro build output and deps
+dist/
+.astro/
+node_modules/
+
+# environment variables
+.env
+.env.production
